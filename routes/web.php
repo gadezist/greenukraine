@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\Map\MarkerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +43,11 @@ Route::get('/contact', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::post('/get/geo-json', [FileController::class, 'getGeoJson'])->name('get-geo-json');
+Route::post('/markers/all', [MarkerController::class, 'all'])->name('markers-all');
+Route::post('/marker/store', [MarkerController::class, 'store'])->name('marker-store');
+Route::post('/marker/{marker}', [MarkerController::class, 'info'])->name('marker-info');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

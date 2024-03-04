@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Map\MarkerController;
 use Illuminate\Support\Facades\Route;
 
 Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:super-admin'])->group(function () {
@@ -16,5 +17,8 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:super-admin'])
     Route::post('/news/{news}', [NewsController::class, 'update'])->name('update-news');
     Route::get('/news/edit/{news}', [NewsController::class, 'edit'])->name('edit-news');
     Route::delete('/news/delete/{news}', [NewsController::class, 'delete'])->name('delete-news');
+
+    Route::post('/marker/store', [MarkerController::class, 'store'])->name('marker-store');
+    Route::delete('/marker/delete/{marker}', [MarkerController::class, 'delete'])->name('marker-delete');
 
 });

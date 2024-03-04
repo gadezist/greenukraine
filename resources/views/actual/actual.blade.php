@@ -1,76 +1,158 @@
 <x-app-layout>
-    <!-- Start Banner Hero -->
-    <div id="template-mo-zay-hero-carousel" class="carousel slide" style="height: 800px" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
-            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="{{ asset('build/assets/img/category_img_03.jpg') }}" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left align-self-center">
-                                <h1 class="h1">Cirecenters researchers help</h1>
-                                <p>
-                                    Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1).
-                                    This template is 100% free provided by <a rel="sponsored" class="text-success" href="https://templatemo.com" target="_blank">TemplateMo</a> website.
-                                    Image credits go to <a rel="sponsored" class="text-success" href="https://stories.freepik.com/" target="_blank">Freepik Stories</a>,
-                                </p>
+    @section('css_section')
+        @vite([
+            "resources/css/main_layout/news/bootstrap.min.css",
+            "resources/css/main_layout/news/owl.carousel.min.css",
+            "resources/css/main_layout/news/ticker-style.css",
+            "resources/css/main_layout/news/flaticon.css",
+            "resources/css/main_layout/news/slicknav.css",
+            "resources/css/main_layout/news/animate.min.css",
+            "resources/css/main_layout/news/magnific-popup.css",
+            "resources/css/main_layout/news/fontawesome-all.min.css",
+            "resources/css/main_layout/news/themify-icons.css",
+            "resources/css/main_layout/news/slick.css",
+            "resources/css/main_layout/news/nice-select.css",
+            "resources/css/main_layout/news/style.css",
+        ])
+    @endsection
+        <!-- Trending Area Start -->
+        <div class="trending-area fix">
+            <div class="container">
+                <div class="trending-main">
+                    <!-- Trending Tittle -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="trending-tittle">
+
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="{{ asset('build/assets/img/banner_img_02.jpg') }}" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left">
-                                <h1 class="h1">Proident occaecat</h1>
-                                <h3 class="h2">Aliquip ex ea commodo consequat</h3>
-                                <p>
-                                    You are permitted to use this Zay CSS template for your commercial websites.
-                                    You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.
-                                </p>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <!-- Trending Top -->
+                            <div class="trending-top mb-30">
+                                <div class="trend-top-img">
+                                    <img src="{{ asset('images/news/trending_top.jpg') }}" alt="">
+                                    <div class="trend-top-cap">
+                                        <h2><a href="{{ route('post') }}">Welcome To The Best Model Winner<br> Contest At Look of the year</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Trending Bottom -->
+                            <div class="trending-bottom">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="single-bottom mb-35">
+                                            <div class="trend-bottom-img mb-30">
+                                                <img src="{{ asset('images/news/trending_bottom1.jpg') }}" alt="">
+                                            </div>
+                                            <div class="trend-bottom-cap">
+                                                <h4><a href="details.html">Get the Illusion of Fuller Lashes by “Mascng.”</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-bottom mb-35">
+                                            <div class="trend-bottom-img mb-30">
+                                                <img src="{{ asset('images/news/trending_bottom2.jpg') }}" alt="">
+                                            </div>
+                                            <div class="trend-bottom-cap">
+                                                <h4><h4><a href="details.html">Get the Illusion of Fuller Lashes by “Mascng.”</a></h4></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-bottom mb-35">
+                                            <div class="trend-bottom-img mb-30">
+                                                <img src="{{ asset('images/news/trending_bottom3.jpg') }}" alt="">
+                                            </div>
+                                            <div class="trend-bottom-cap">
+                                                <h4><a href="details.html"> Welcome To The Best Model Winner Contest</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="{{ asset('build/assets/img/banner_img_03.jpg') }}" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left">
-                                <h1 class="h1">Repr in voluptate</h1>
-                                <h3 class="h2">Ullamco laboris nisi ut </h3>
-                                <p>
-                                    We bring you 100% free CSS templates for your websites.
-                                    If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.
-                                </p>
+                        <!-- Riht content -->
+                        <div class="col-lg-4">
+                            <div class="trand-right-single d-flex">
+                                <div class="trand-right-img">
+                                    <img src="{{ asset('images/news/right1.jpg') }}" alt="">
+                                </div>
+                                <div class="trand-right-cap">
+                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                </div>
+                            </div>
+                            <div class="trand-right-single d-flex">
+                                <div class="trand-right-img">
+                                    <img src="{{ asset('images/news/right2.jpg') }}" alt="">
+                                </div>
+                                <div class="trand-right-cap">
+                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                </div>
+                            </div>
+                            <div class="trand-right-single d-flex">
+                                <div class="trand-right-img">
+                                    <img src="{{ asset('images/news/right3.jpg') }}" alt="">
+                                </div>
+                                <div class="trand-right-cap">
+                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                </div>
+                            </div>
+                            <div class="trand-right-single d-flex">
+                                <div class="trand-right-img">
+                                    <img src="{{ asset('images/news/right4.jpg') }}" alt="">
+                                </div>
+                                <div class="trand-right-cap">
+                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                </div>
+                            </div>
+                            <div class="trand-right-single d-flex">
+                                <div class="trand-right-img">
+                                    <img src="{{ asset('images/news/right5.jpg') }}" alt="">
+                                </div>
+                                <div class="trand-right-cap">
+                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
-            <i class="fas fa-chevron-left"></i>
-        </a>
-        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
-            <i class="fas fa-chevron-right"></i>
-        </a>
-    </div>
-    <!-- End Banner Hero -->
+        <!-- Trending Area End -->
+
+        @section('footer')
+            @include('layouts.footer')
+        @endsection
+
+        @section('footer-scripts')
+
+            @vite([
+                "resources/js/main_layout/news/vendor/modernizr-3.5.0.min.js",
+                "resources/js/main_layout/news/vendor/jquery-1.12.4.min.js",
+                "resources/js/main_layout/news/popper.min.js",
+                "resources/js/main_layout/news/bootstrap.min.js",
+                "resources/js/main_layout/news/jquery.slicknav.min.js",
+                "resources/js/main_layout/news/owl.carousel.min.js",
+                "resources/js/main_layout/news/slick.min.js",
+                "resources/js/main_layout/news/gijgo.min.js",
+                "resources/js/main_layout/news/wow.min.js",
+                "resources/js/main_layout/news/animated.headline.js",
+                "resources/js/main_layout/news/jquery.magnific-popup.js",
+                "resources/js/main_layout/news/jquery.ticker.js",
+                "resources/js/main_layout/news/site.js",
+                "resources/js/main_layout/news/jquery.scrollUp.min.js",
+                "resources/js/main_layout/news/jquery.nice-select.min.js",
+                "resources/js/main_layout/news/jquery.sticky.js",
+                "resources/js/main_layout/news/contact.js",
+                "resources/js/main_layout/news/jquery.form.js",
+                "resources/js/main_layout/news/jquery.validate.min.js",
+                "resources/js/main_layout/news/mail-script.js",
+                "resources/js/main_layout/news/jquery.ajaxchimp.min.js",
+                "resources/js/main_layout/news/plugins.js",
+                "resources/js/main_layout/news/main.js",
+            ])
+        @endsection
 </x-app-layout>

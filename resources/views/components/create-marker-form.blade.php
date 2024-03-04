@@ -1,5 +1,5 @@
 <div class="card-body pt-2 pb-3 pe-2 marker-form">
-    <form method="POST" action="{{ route('marker-store') }}" id="create-marker-form" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('admin.marker-store') }}" id="create-marker-form" enctype="multipart/form-data">
         @csrf
         <div>
             <x-input-label for="name" :value="__('Name')" />

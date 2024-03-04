@@ -1,5 +1,6 @@
 import {drawBoundary, drawMarkers} from "./draw-geo-json.js";
 import {createMarkerEvent} from "./create-marker-event.js";
+import {deleteMarkerEvent} from "./delete-marker.js";
 
 export async function initMap() {
     const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -30,7 +31,6 @@ export async function initMap() {
     let layerControl = L.control.layers(baseMap).addTo(map);
 
     await drawBoundary('/get/geo-json', map, layerControl)
-    await drawMarkers(map);
 
     let drawnItems = new L.FeatureGroup();
     map.addLayer(drawnItems);
@@ -49,5 +49,8 @@ export async function initMap() {
     });
     map.addControl(drawControl);
 
+    await drawMarkers(map, drawnItems);
+
     await createMarkerEvent(map, drawnItems)
+    await deleteMarkerEvent(map, drawnItems)
 }

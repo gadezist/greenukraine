@@ -5,26 +5,24 @@ L.Control.MarkerInfo = L.Control.extend({
     },
     onAdd: function (map) {
         var container = L.DomUtil.create('div', 'info panel parcel-map-info-panel');
-
-
+        map.customControl = this;
 
         L.DomEvent.disableClickPropagation(container);
 
         return container;
     },
     onRemove: function(map) {
-
+        delete map.customControl;
     },
-    updateContent: function (props) {
-        this.getContainer().innerHTML = this._getContent(props)
-    },
-    _getContent: function (props) {
-        fetch('/marker/' + props.id, {
+    updateContent: function (props, container) {
+        let response = fetch('/marker/' + props.id, {
             method: 'POST',
         }).then(function(response) {
             return response.json();
         })
-    }
+        response.then(data => this.getContainer().innerHTML = data.marker_table)
+        this.objectId = props.id;
+    },
 });
 
 
@@ -51,7 +49,8 @@ export async function drawBoundary(url, map, layerControl)
 }
 
 let markerInfo = new L.Control.MarkerInfo()
-export async function drawMarkers(map)
+
+export async function drawMarkers(map, drawnItems)
 {
     fetch('/markers/all', {
         method: 'POST',
@@ -59,21 +58,25 @@ export async function drawMarkers(map)
         return response.json();
     }).then(function(json) {
         console.log(json)
+        closeMarkerInfoEvent(map);
         L.geoJSON(json.markers, {
             pointToLayer: function (feature, latlng) {
                 let marker = L.marker(latlng)
                 marker.on('click', function (e) {
-                    markerInfo.updateContent(feature.properties)
 
-                    markerInfo.addTo(map);
-                    // // Отримуємо властивості об'єкта, представленого маркером
-                    // var properties = feature.properties;
-                    // // Оновлюємо вміст контролу з відображенням даних маркера
-                    // customControl.update(properties);
+                    let markerContainer = markerInfo.addTo(map);
+                    markerContainer.updateContent(feature.properties, markerContainer)
+
                 });
-
+                drawnItems.addLayer(marker);
                 return marker;
             }
         }).addTo(map);
+    });
+}
+
+async function closeMarkerInfoEvent(map) {
+    $(document).on('click', '#close-button', function() {
+        map.removeControl(markerInfo);
     });
 }

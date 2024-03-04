@@ -10,7 +10,7 @@ export async function createMarkerEvent(map, drawnItems) {
         if (e.layerType === 'marker') {
             drawnItems.addLayer(marker);
             // map.addLayer(layer);
-            customControl = handleMarkerCreation(marker);
+            customControl = handleMarkerCreation();
         }
     });
 
@@ -60,13 +60,12 @@ export async function createMarkerEvent(map, drawnItems) {
         },
     });
 
-    function handleMarkerCreation(marker) {
+    function handleMarkerCreation() {
         let formMarkerPanel = new L.Control.Custom();
 
         formMarkerPanel.addTo(map);
 
         return formMarkerPanel;
-        // console.log('New marker created:', marker.getLatLng());
     }
 }
 

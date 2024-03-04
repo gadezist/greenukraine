@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
+use App\Casts\Point;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class MarkerData extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -28,6 +30,7 @@ class MarkerData extends Model
 
     protected $casts = [
         'geo_json' => 'json',
+        'geom' => Point::class,
     ];
 
     public function files(): MorphMany

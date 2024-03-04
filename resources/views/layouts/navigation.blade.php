@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="border-gray-100 header-main-layout" >
 {{--    <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">--}}
 {{--        @if (Route::has('login'))--}}
 {{--            <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">--}}
@@ -15,29 +15,46 @@
 {{--        @endif--}}
 {{--    </div>--}}
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container-fluid">
         <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('index') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
+            <div class=" col-md-2 col-sm-3 col logo_section">
+                <div class="full">
+                    <div class="center-desk">
+                        <div class="logo">
+{{--                            <a href="{{ route('about') }}"><img src={{ asset("images/logo.png") }} alt="#" /></a>--}}
+                            <a href="{{ route('home') }}">
+                                <h1 class="text-green-700">Green Ukraine</h1>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
+            </div>
+            <div class="flex">
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex header-menu">
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                        {{ __('Home') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
                         {{ __('About') }}
                     </x-nav-link>
                     <x-nav-link :href="route('map')" :active="request()->routeIs('map')">
                         {{ __('Map') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('partners')" :active="request()->routeIs('partners')">
-                        {{ __('Partners') }}
-                    </x-nav-link>
+{{--                    <x-nav-link :href="route('partners')" :active="request()->routeIs('partners')">--}}
+{{--                        {{ __('Partners') }}--}}
+{{--                    </x-nav-link>--}}
                     <x-nav-link :href="route('actual')" :active="request()->routeIs('actual')">
                         {{ __('Actual') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('team')" :active="request()->routeIs('team')">
+                        {{ __('Team') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                        {{ __('Contact') }}
                     </x-nav-link>
                 </div>
             </div>

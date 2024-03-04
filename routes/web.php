@@ -17,15 +17,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('about.about');
-})->name('index');
+    return view('home.home');
+})->name('home');
 
 Route::get('/about', function () {
     return view('about.about');
 })->name('about');
 
 Route::get('/map', function () {
-    return view('map.map');
+    return view('map.map', ['map_header' => true]);
 })->name('map');
 
 Route::get('/partners', function () {
@@ -35,6 +35,14 @@ Route::get('/partners', function () {
 Route::get('/actual', function () {
     return view('actual.actual');
 })->name('actual');
+
+Route::get('/post', function () {
+    return view('actual.post');
+})->name('post');
+
+Route::get('/team', function () {
+    return view('team.team');
+})->name('team');
 
 Route::get('/contact', function () {
     return view('contact.contact');
@@ -46,7 +54,6 @@ Route::get('/dashboard', function () {
 
 Route::post('/get/geo-json', [FileController::class, 'getGeoJson'])->name('get-geo-json');
 Route::post('/markers/all', [MarkerController::class, 'all'])->name('markers-all');
-Route::post('/marker/store', [MarkerController::class, 'store'])->name('marker-store');
 Route::post('/marker/{marker}', [MarkerController::class, 'info'])->name('marker-info');
 
 Route::middleware('auth')->group(function () {

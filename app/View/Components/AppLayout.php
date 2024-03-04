@@ -7,6 +7,11 @@ use Illuminate\View\View;
 
 class AppLayout extends Component
 {
+    public bool $mapHeader;
+    public function __construct($mapHeader = false)
+    {
+        $this->mapHeader = $mapHeader;
+    }
     /**
      * Get the view / contents that represents the component.
      */

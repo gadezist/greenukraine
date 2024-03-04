@@ -3,10 +3,68 @@
 @tailwind utilities;
 
 .map {
-    height: 100vh;
+    height: 92vh;
+    z-index: 0;
 }
 
 .marker-form {
     background: lightgrey;
+}
+
+.info-marker {
+    background: white;
+}
+
+.info-marker table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.info-marker caption {
+    caption-side: top;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.header-main-layout {
+    background: #272b2c !important;
+    height: 106px !important;
+    padding: 37px 30px !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.h-16 {
+    height: 2rem !important;
+}
+
+.header-main-layout a {
+    font-size: 17px;
+}
+
+.header-main-layout .header-menu a:hover {
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.about {
+    height: 100% !important;
+}
+
+/* for mini images */
+.thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.thumbnail {
+    width: 100px;
+    margin: 5px;
+}
+.thumbnail img {
+    width: 100%;
+    height: auto;
 }
 

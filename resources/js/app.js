@@ -25,6 +25,6 @@ $(function () {
         return originalFetch(url, options);
     };
 
-    initMap();
+    // initMap();
 })
 

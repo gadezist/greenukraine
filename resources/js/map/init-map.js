@@ -47,7 +47,9 @@ export async function initMap() {
             featureGroup: drawnItems
         }
     });
-    map.addControl(drawControl);
+    if (window.userRole === 'super-admin') {
+        map.addControl(drawControl);
+    }
 
     await drawMarkers(map, drawnItems);
 

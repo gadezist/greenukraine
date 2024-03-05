@@ -3,6 +3,7 @@
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\Map\MarkerController;
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +26,7 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/map', function () {
-    return view('map.map', ['map_header' => true]);
+    return view('map.map', ['map_header' => true, 'user_role' => Auth::user()?->getRoleNames()[0]]);
 })->name('map');
 
 Route::get('/partners', function () {

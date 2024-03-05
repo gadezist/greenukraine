@@ -26,31 +26,19 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/partners_team/team-1.jpg') }}" class="img1" alt="">
+                                <img src="{{ asset('images/partners_team/igor.jpg') }}" class="img1" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
-                                    Joseph Brown
+                                    Igor Storchak
                                 </h5>
                                 <p>
-                                    Marketing Head
+                                    igor.storchak@students.bfh.ch
                                 </p>
                             </div>
                             <div class="social_box">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
+                                <a href="http://linkedin.com/in/igor-storchak-17530120">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -58,31 +46,19 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/partners_team/team-2.jpg') }}" class="img1" alt="">
+                                <img src="{{ asset('images/partners_team/jenya_f.jpg') }}" class="img1" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
-                                    Nancy White
+                                    Yevheniia Kozyr
                                 </h5>
                                 <p>
-                                    Marketing Head
+                                    yevheniia.kozyr@students.bfh.ch
                                 </p>
                             </div>
                             <div class="social_box">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
+                                <a href="https://www.linkedin.com/in/yevheniia-kozyr-9084a2146/">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -90,31 +66,19 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/partners_team/team-3.jpg') }}" class="img1" alt="">
+                                <img src="{{ asset('images/partners_team/yevgen_f.jpg') }}" class="img1" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
-                                    Earl Martinez
+                                    Yevgen Getman
                                 </h5>
                                 <p>
-                                    Marketing Head
+                                    yevgen.getman@students.bfh.ch
                                 </p>
                             </div>
                             <div class="social_box">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
+                                <a href="http://linkedin.com/in/yevgen-getman-2a42b327b">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -122,31 +86,19 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/partners_team/team-4.jpg') }}" class="img1" alt="">
+                                <img src="{{ asset('images/partners_team/hanna_f.jpg') }}" class="img1" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
-                                    Josephine Allard
+                                    Hanna Stepanenko
                                 </h5>
                                 <p>
-                                    Marketing Head
+                                    hanna.stepanenko@students.bfh.ch
                                 </p>
                             </div>
                             <div class="social_box">
                                 <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -156,127 +108,25 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/partners_team/team-1.jpg') }}" class="img1" alt="">
+                                <img src="{{ asset('images/partners_team/galyna_f.jpg') }}" class="img1" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
-                                    Joseph Brown
+                                    Galyna Chos
                                 </h5>
                                 <p>
-                                    Marketing Head
+                                    galyna.chos@students.bfh.ch
                                 </p>
                             </div>
                             <div class="social_box">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
+{{--                                <a href="#">--}}
+{{--                                    <i class="fa fa-facebook" aria-hidden="true"></i>--}}
+{{--                                </a>--}}
+{{--                                <a href="#">--}}
+{{--                                    <i class="fa fa-twitter" aria-hidden="true"></i>--}}
+{{--                                </a>--}}
+                                <a href="https://www.linkedin.com/in/galyna-chos-9a9b407b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="box ">
-                            <div class="img-box">
-                                <img src="{{ asset('images/partners_team/team-2.jpg') }}" class="img1" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>
-                                    Nancy White
-                                </h5>
-                                <p>
-                                    Marketing Head
-                                </p>
-                            </div>
-                            <div class="social_box">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="box ">
-                            <div class="img-box">
-                                <img src="{{ asset('images/partners_team/team-3.jpg') }}" class="img1" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>
-                                    Earl Martinez
-                                </h5>
-                                <p>
-                                    Marketing Head
-                                </p>
-                            </div>
-                            <div class="social_box">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="box ">
-                            <div class="img-box">
-                                <img src="{{ asset('images/partners_team/team-4.jpg') }}" class="img1" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>
-                                    Josephine Allard
-                                </h5>
-                                <p>
-                                    Marketing Head
-                                </p>
-                            </div>
-                            <div class="social_box">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>

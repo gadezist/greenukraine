@@ -17,14 +17,20 @@
     <!-- Primary Navigation Menu -->
     <div class="container-fluid">
         <div class="flex justify-between h-16">
-            <div class=" col-md-2 col-sm-3 col logo_section">
+            <div class=" col-md-3 col-sm-3 col logo_section">
                 <div class="full">
                     <div class="center-desk">
-                        <div class="logo">
-{{--                            <a href="{{ route('about') }}"><img src={{ asset("images/logo.png") }} alt="#" /></a>--}}
+                        <div class="logo row justify-between d-flex align-items-center" style="width: 500px">
                             <a href="{{ route('home') }}">
                                 <h1 class="text-green-700">Green Ukraine</h1>
                             </a>
+                            <a href="https://ethz.ch/en.html" target="_blank">
+                                <img style="width: 140px" class="" src={{ asset("images/ETH_Zurich_Logo.png") }} alt="ETH Zürich" />
+                            </a>
+                            <a href="https://www.bfh.ch/en/" target="_blank">
+                                <img style="width: 140px" src={{ asset("images/BFH_Logo.png") }} alt="#" />
+                            </a>
+
                         </div>
                     </div>
                 </div>

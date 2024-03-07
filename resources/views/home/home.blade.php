@@ -14,8 +14,8 @@
                                 <div class="container-fluid">
                                     <div class="carousel-caption relative">
                                         <div class="bluid">
-                                            <h1 style="color: darkgreen">SAVE UKRAINIAN<br style="color: darkgreen">LANDS TODAY</h1>
-                                            <p style="color: black">Over 50,000 square kilometers of Ukraine's agricultural soils are damaged by war</p>
+                                            <h1 style="color: white">SAVE UKRAINIAN<br style="color: darkgreen">LANDS TODAY</h1>
+                                            <p style="color: white; font-size: 24px">Over 50,000 square kilometers of Ukraine's agricultural soils are damaged by war</p>
                                             <a class="read_more" href="{{ route('about') }}">About</a><a class="read_more" href="{{ route('actual') }}">Actual</a>
                                         </div>
                                     </div>
@@ -25,8 +25,8 @@
                                 <div class="container-fluid">
                                     <div class="carousel-caption relative">
                                         <div class="bluid">
-                                            <h1 style="color: darkgreen">FOR PLANET`S<br style="color: darkgreen">GREENER TOMORROW</h1>
-                                            <p style="color: black">We must restore our lands, safeguarding the planet's future</p>
+                                            <h1 style="color: white">FOR PLANET`S<br style="color: darkgreen">GREENER TOMORROW</h1>
+                                            <p style="color: white; font-size: 24px">We must restore our lands, safeguarding the planet's future</p>
                                             <a class="read_more" href="{{ route('map') }}">Map</a><a class="read_more" href="{{ route('team') }}">Team</a>
                                         </div>
                                     </div>

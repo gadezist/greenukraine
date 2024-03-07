@@ -607,7 +607,7 @@ a:focus {
 /*team section */
 .team_section {
   text-align: center;
-  background-color: #00204a;
+  background-color: #539728;;
   color: #ffffff;
 }
 
@@ -629,7 +629,8 @@ a:focus {
   transition: all .1s;
   margin-top: 45px;
   background: -webkit-gradient(linear, left top, left bottom, from(#002759), to(#002b64));
-  background: linear-gradient(to bottom, #002759, #002b64);
+  background: linear-gradient(to bottom, #498549, #096408);
+    height: 400px;
 }
 
 .team_section .team_container .box .img-box {
@@ -645,9 +646,9 @@ a:focus {
 }
 
 .team_section .team_container .box .img-box img {
-  width: 120px;
+  width: 200px;
   border-radius: 100%;
-  border: 5px solid #ffffff;
+  /*border: 5px solid #ffffff;*/
 }
 
 .team_section .team_container .box .detail-box {
@@ -658,6 +659,7 @@ a:focus {
   color: #00bbf0;
   font-weight: 600;
   position: relative;
+    font-size: large;
 }
 
 .team_section .team_container .box .social_box {
@@ -667,7 +669,7 @@ a:focus {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: center;
 }
 
 .team_section .team_container .box .social_box a {

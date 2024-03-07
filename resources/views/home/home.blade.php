@@ -14,10 +14,9 @@
                                 <div class="container-fluid">
                                     <div class="carousel-caption relative">
                                         <div class="bluid">
-                                            <h1>Green Ukraine  <br>Work Idea </h1>
-                                            <p>There are many variations of passages of Lorem Ipsum <br>available, but the majority have suffered alteration
-                                            </p>
-                                            <a class="read_more" href="#about">About Us </a><a class="read_more" href="{{ route('contact') }}">Contact </a>
+                                            <h1 style="color: darkgreen">SAVE UKRAINIAN<br style="color: darkgreen">LANDS TODAY</h1>
+                                            <p style="color: black">Over 50,000 square kilometers of Ukraine's agricultural soils are damaged by war</p>
+                                            <a class="read_more" href="{{ route('about') }}">About</a><a class="read_more" href="{{ route('actual') }}">Actual</a>
                                         </div>
                                     </div>
                                 </div>
@@ -26,10 +25,9 @@
                                 <div class="container-fluid">
                                     <div class="carousel-caption relative">
                                         <div class="bluid">
-                                            <h1>Green Ukraine  <br>Work Idea </h1>
-                                            <p>There are many variations of passages of Lorem Ipsum <br>available, but the majority have suffered alteration
-                                            </p>
-                                            <a class="read_more" href="#about">About Us </a><a class="read_more" href="{{ route('contact') }}">Contact </a>
+                                            <h1 style="color: darkgreen">FOR PLANET`S<br style="color: darkgreen">GREENER TOMORROW</h1>
+                                            <p style="color: black">We must restore our lands, safeguarding the planet's future</p>
+                                            <a class="read_more" href="{{ route('map') }}">Map</a><a class="read_more" href="{{ route('team') }}">Team</a>
                                         </div>
                                     </div>
                                 </div>

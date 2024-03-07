@@ -22,22 +22,23 @@
             </div>
 
             <div class="team_container">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-lg-3 col-sm-6">
-                        <div class="box ">
+                        <div class="box">
                             <div class="img-box">
-                                <img src="{{ asset('images/partners_team/igor.jpg') }}" class="img1" alt="">
+                                <img src="{{ asset('images/partners_team/Olena_Melnyk.jpg') }}" class="img1" alt="">
                             </div>
-                            <div class="detail-box">
+                            <div class="detail-box" style="margin-bottom: 0">
                                 <h5>
-                                    Igor Storchak
+                                    Dr. Olena Melnyk
                                 </h5>
+                                <p>ETH Zürich</p>
                                 <p>
-                                    igor.storchak@students.bfh.ch
+                                    <i class="fa fa-envelope" aria-hidden="true"></i> olena.melnyk@usys.ethz.ch
                                 </p>
                             </div>
                             <div class="social_box">
-                                <a href="http://linkedin.com/in/igor-storchak-17530120">
+                                <a href="https://www.linkedin.com/in/olena-melnyk-4793b6128/">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -46,34 +47,14 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/partners_team/jenya_f.jpg') }}" class="img1" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>
-                                    Yevheniia Kozyr
-                                </h5>
-                                <p>
-                                    yevheniia.kozyr@students.bfh.ch
-                                </p>
-                            </div>
-                            <div class="social_box">
-                                <a href="https://www.linkedin.com/in/yevheniia-kozyr-9084a2146/">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="box ">
-                            <div class="img-box">
-                                <img src="{{ asset('images/partners_team/yevgen_f.jpg') }}" class="img1" alt="">
+                                <img src="{{ asset('images/partners_team/Evgen_Getman.jpg') }}" class="img1" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
                                     Yevgen Getman
                                 </h5>
                                 <p>
-                                    yevgen.getman@students.bfh.ch
+                                    <i class="fa fa-envelope" aria-hidden="true"></i> yevgen.getman@students.bfh.ch
                                 </p>
                             </div>
                             <div class="social_box">
@@ -86,36 +67,56 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/partners_team/hanna_f.jpg') }}" class="img1" alt="">
+                                <img src="{{ asset('images/partners_team/Yevheniia_Kozyr.jpg') }}" class="img1" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
-                                    Hanna Stepanenko
+                                    Yevheniia Kozyr
                                 </h5>
                                 <p>
-                                    hanna.stepanenko@students.bfh.ch
+                                    <i class="fa fa-envelope" aria-hidden="true"></i> yevheniia.kozyr@students.bfh.ch
                                 </p>
                             </div>
                             <div class="social_box">
-                                <a href="#">
+                                <a href="https://www.linkedin.com/in/yevheniia-kozyr-9084a2146/">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-lg-3 col-sm-6">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/partners_team/galyna_f.jpg') }}" class="img1" alt="">
+                                <img src="{{ asset('images/partners_team/Hanna_Stepanenko.jpg') }}" class="img1" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Hanna Stepanenko
+                                </h5>
+                                <p>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i> hanna.stepanenko@students.bfh.ch
+                                </p>
+                            </div>
+                            <div class="social_box">
+{{--                                <a href="#">--}}
+{{--                                    <i class="fa fa-linkedin" aria-hidden="true"></i>--}}
+{{--                                </a>--}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="{{ asset('images/partners_team/Galyna_Chos.jpg') }}" class="img1" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
                                     Galyna Chos
                                 </h5>
                                 <p>
-                                    galyna.chos@students.bfh.ch
+                                    <i class="fa fa-envelope" aria-hidden="true"></i> galyna.chos@students.bfh.ch
                                 </p>
                             </div>
                             <div class="social_box">
@@ -123,9 +124,29 @@
 {{--                                    <i class="fa fa-facebook" aria-hidden="true"></i>--}}
 {{--                                </a>--}}
 {{--                                <a href="#">--}}
-{{--                                    <i class="fa fa-twitter" aria-hidden="true"></i>--}}
+{{--                                    <i class="fa fa-envelope" aria-hidden="true"></i>--}}
 {{--                                </a>--}}
                                 <a href="https://www.linkedin.com/in/galyna-chos-9a9b407b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="{{ asset('images/partners_team/Igor_Storchak.jpg') }}" class="img1" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Igor Storchak
+                                </h5>
+                                <p>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i> igor.storchak@students.bfh.ch
+                                </p>
+                            </div>
+                            <div class="social_box">
+                                <a href="http://linkedin.com/in/igor-storchak-17530120">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                                 </a>
                             </div>

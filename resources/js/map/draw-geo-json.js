@@ -15,8 +15,8 @@ L.Control.MarkerInfo = L.Control.extend({
         delete map.customControl;
     },
     updateContent: function (props, container) {
-        let response = fetch('/marker/' + props.id, {
-            method: 'POST',
+        let response = fetch('/marker/get/' + props.id, {
+            method: 'GET',
         }).then(function(response) {
             return response.json();
         })
@@ -31,7 +31,7 @@ export async function drawBoundary(url, map, layerControl)
     fetch(url, {
         method: 'POST',
         body: JSON.stringify({
-            'filename': 'ukraine-boundaries.json'
+            'filename': 'ua_bound_reg.geojson'
         })
     }).then(function(response) {
         return response.json();

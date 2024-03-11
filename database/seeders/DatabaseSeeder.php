@@ -16,12 +16,12 @@ class DatabaseSeeder extends Seeder
 
          \App\Models\User::factory()->create([
              'name' => 'super_admin',
-             'email' => 'admin@test.com',
+             'email' => 'admin@greenukraine.ch',
          ]);
 
         \App\Models\User::factory()->create([
             'name' => 'Expert',
-            'email' => 'expert@test.com',
+            'email' => 'expert@greenukraine.ch',
         ]);
     }
 }

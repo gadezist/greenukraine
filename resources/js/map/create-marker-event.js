@@ -35,7 +35,7 @@ export async function createMarkerEvent(map, drawnItems) {
                 formData.append('lng', coord.lng)
 
                 $.ajax({
-                    url: '/marker/store',
+                    url: '/admin/marker/store',
                     type: 'POST',
                     data: formData,
                     processData: false,

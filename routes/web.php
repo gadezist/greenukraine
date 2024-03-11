@@ -55,7 +55,7 @@ Route::get('/dashboard', function () {
 
 Route::post('/get/geo-json', [FileController::class, 'getGeoJson'])->name('get-geo-json');
 Route::post('/markers/all', [MarkerController::class, 'all'])->name('markers-all');
-Route::post('/marker/{marker}', [MarkerController::class, 'info'])->name('marker-info');
+Route::get('/marker/get/{marker}', [MarkerController::class, 'info'])->name('marker-info');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

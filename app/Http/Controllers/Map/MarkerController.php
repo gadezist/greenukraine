@@ -4,12 +4,13 @@ namespace App\Http\Controllers\Map;
 
 use App\Http\Requests\MarkerRequest;
 use App\Models\MarkerData;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class MarkerController
 {
-    public function all()
+    public function all(): JsonResponse
     {
         $markers = MarkerData::pluck('geo_json', 'id')->toArray();
         foreach ($markers as $key => &$value) {
@@ -22,12 +23,11 @@ class MarkerController
         ]);
     }
 
-    public function store(MarkerRequest $markerRequest)
+    public function store(MarkerRequest $markerRequest): JsonResponse
     {
         $validatedData = $markerRequest->validated();
-
-
         $markerData = MarkerData::create($validatedData);
+
         if ($markerRequest->hasFile('photos')) {
             $photos = $markerRequest->file('photos');
             foreach ($photos as $photo) {
@@ -48,7 +48,7 @@ class MarkerController
         $longitude = $markerRequest->input('lng');
 
         $markerData->geo_json = $this->createGeoJson($validatedData, [$longitude, $latitude]);
-        $markerData->geom = DB::raw("ST_GeomFromText('POINT({$longitude} {$latitude})')");
+        $markerData->geom = DB::raw("ST_GeomFromText('POINT({$latitude} {$longitude})')");
 
         $markerData->save();
 
@@ -58,7 +58,7 @@ class MarkerController
         ]);
     }
 
-    public function delete(MarkerData $marker)
+    public function delete(MarkerData $marker): JsonResponse
     {
         $marker->delete();
 
@@ -67,7 +67,7 @@ class MarkerController
         ]);
     }
 
-    public function info(MarkerData $marker)
+    public function info(MarkerData $marker): JsonResponse
     {
         $markerView = view('map.info', ['marker' => $marker])->render();
 
@@ -76,7 +76,7 @@ class MarkerController
         ]);
     }
 
-    private function createGeoJson($attributes, $coordinates)
+    private function createGeoJson($attributes, $coordinates): array
     {
         $geoJsonFeature = [
             'type' => 'Feature',

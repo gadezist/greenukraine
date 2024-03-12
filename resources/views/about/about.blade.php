@@ -49,15 +49,17 @@
                         <div class="why_container">
                             <div class="box">
                                 <div class="img-box">
-                                    <img src="{{ asset('images/partners_team/w1.png') }}" alt="">
+                                    <a href="https://ethz.ch/en.html" target="_blank">
+                                        <img style="width: 220px" class="" src={{ asset("images/partners_team/ETH_Zurich_Logo.png") }} alt="ETH Zürich" />
+                                    </a>
                                 </div>
                                 <div class="detail-box">
-                                    <h5>
-                                        Expert Management
-                                    </h5>
-                                    <p>
-                                        Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-                                    </p>
+{{--                                    <h5>--}}
+{{--                                        ETH Zürich--}}
+{{--                                    </h5>--}}
+{{--                                    <p>--}}
+{{--                                        Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.--}}
+{{--                                    </p>--}}
                                 </div>
                             </div>
                         </div>
@@ -66,32 +68,17 @@
                         <div class="why_container">
                             <div class="box">
                                 <div class="img-box">
-                                    <img src="{{ asset('images/partners_team/w2.png') }}" alt="">
+                                    <a href="https://www.bfh.ch/en/" target="_blank">
+                                        <img style="width: 220px" src={{ asset("images/partners_team/BFH_Logo.png") }} alt="BFH" />
+                                    </a>
                                 </div>
                                 <div class="detail-box">
-                                    <h5>
-                                        Secure Investment
-                                    </h5>
-                                    <p>
-                                        Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="why_container">
-                            <div class="box">
-                                <div class="img-box">
-                                    <img src="{{ asset('images/partners_team/w3.png') }}" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Instant Trading
-                                    </h5>
-                                    <p>
-                                        Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-                                    </p>
+{{--                                    <h5>--}}
+{{--                                        Bern University of Applied Sciences--}}
+{{--                                    </h5>--}}
+{{--                                    <p>--}}
+{{--                                        Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.--}}
+{{--                                    </p>--}}
                                 </div>
                             </div>
                         </div>

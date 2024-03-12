@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\Map\MarkerController;
 use App\Http\Controllers\ProfileController;
@@ -45,9 +46,8 @@ Route::get('/team', function () {
     return view('team.team');
 })->name('team');
 
-Route::get('/contact', function () {
-    return view('contact.contact');
-})->name('contact');
+Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
+Route::post('/contact/send', [ContactUsController::class, 'send'])->name('contact.send');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

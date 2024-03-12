@@ -7,19 +7,25 @@
                     <div class="titlepage text_align_left">
                         <h2>Get In Touch</h2>
                     </div>
-                    <form id="request" class="main_form">
+                    @include('partials.success-message')
+                    <form id="contact-us" class="main_form" method="POST" action="{{ route('contact.send') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="Name" type="type" name=" Name">
+                                @error('name') <small class="text-danger">{{ $message }}</small>@enderror
+                                <input class="contactus @error('name') is-invalid @enderror" placeholder="Name" type="text" name="name">
                             </div>
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">
+                                @error('phone') <small class="text-danger">{{ $message }}</small>@enderror
+                                <input class="contactus @error('phone') is-invalid @enderror" placeholder="Phone Number" type="text" name="phone">
                             </div>
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="Email" type="type" name="Email">
+                                @error('email') <small class="text-danger">{{ $message }}</small>@enderror
+                                <input class="contactus @error('email') is-invalid @enderror" placeholder="Email" type="email" name="email">
                             </div>
                             <div class="col-md-12">
-                                <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                                @error('message') <small class="text-danger">{{ $message }}</small>@enderror
+                                <textarea class="textarea @error('message') is-invalid @enderror" placeholder="Message" type="text" name="message"></textarea>
                             </div>
                             <div class="col-md-12">
                                 <button class="send_btn">Send Now</button>

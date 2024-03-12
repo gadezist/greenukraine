@@ -547,12 +547,12 @@ a:focus {
 
 .why_section .box .img-box {
   margin-bottom: 20px;
-  width: 120px;
-  height: 120px;
+  width: 220px;
+  height: 220px;
   min-width: 120px;
   min-height: 120px;
   border-radius: 100%;
-  border: 5px solid #00204a;
+  /*border: 5px solid #00204a;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

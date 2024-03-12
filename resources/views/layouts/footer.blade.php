@@ -23,7 +23,7 @@
                     <div class="Informa conta">
                         <h3>contact Us</h3>
                         <ul>
-                            <li> <a href="Javascript:void(0)"> <i class="fa fa-envelope" aria-hidden="true"></i> green_ukraine@gmail.com
+                            <li> <a href="Javascript:void(0)"> <i class="fa fa-envelope" aria-hidden="true"></i> admin@greenukraine.ch
                                 </a>
                             </li>
                         </ul>

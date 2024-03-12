@@ -24,13 +24,6 @@
                             <a href="{{ route('home') }}">
                                 <h1 class="text-green-700">Green Ukraine</h1>
                             </a>
-                            <a href="https://ethz.ch/en.html" target="_blank">
-                                <img style="width: 140px" class="" src={{ asset("images/ETH_Zurich_Logo.png") }} alt="ETH Zürich" />
-                            </a>
-                            <a href="https://www.bfh.ch/en/" target="_blank">
-                                <img style="width: 140px" src={{ asset("images/BFH_Logo.png") }} alt="#" />
-                            </a>
-
                         </div>
                     </div>
                 </div>

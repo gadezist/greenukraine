@@ -22,6 +22,8 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFGRE6JCGY"></script>
+
         @if(isset($mapHeader))
             <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
                   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -43,6 +45,7 @@
         @vite([
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'resources/js/gtag.js',
                 "resources/css/main_layout/bootstrap.min.css",
                 "resources/css/main_layout/style.css",
                 "resources/css/main_layout/responsive.css",

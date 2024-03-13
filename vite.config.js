@@ -52,6 +52,7 @@ export default defineConfig({
                 "resources/js/main_layout/news/plugins.js",
                 "resources/js/main_layout/news/main.js",
                 'resources/js/admin/news.js',
+                'resources/js/gtag.js',
             ],
             refresh: true,
         }),

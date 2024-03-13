@@ -4,22 +4,26 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\Admin\NewsRequest;
 use App\Models\News;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 
 class NewsController
 {
-    public function index()
+    public function index(): View|\Illuminate\Foundation\Application|Factory|Application
     {
         return view('admin.news.news', [
             'posts' => News::all(),
         ]);
     }
 
-    public function create()
+    public function create(): View|\Illuminate\Foundation\Application|Factory|Application
     {
         return view('admin.news.create-news');
     }
 
-    public function store(NewsRequest $newsRequest)
+    public function store(NewsRequest $newsRequest): RedirectResponse
     {
         if (!$newsRequest->hasFile('image')) {
             return redirect()->back()->withErrors(['errors', 'Upload file error']);
@@ -37,14 +41,14 @@ class NewsController
         return redirect()->route('admin.news')->with('success', 'News created successfully');
     }
 
-    public function edit(News $news)
+    public function edit(News $news): Application|Factory|View|\Illuminate\Foundation\Application
     {
         return view('admin.news.edit-news', [
             'news' => $news
         ]);
     }
 
-    public function update(NewsRequest $newsRequest, News $news)
+    public function update(NewsRequest $newsRequest, News $news): RedirectResponse
     {
         $validatedData = $newsRequest->validated();
 
@@ -60,7 +64,7 @@ class NewsController
         return redirect()->route('admin.news')->with('success', 'News updated successfully');
     }
 
-    public function delete(News $news)
+    public function delete(News $news): RedirectResponse
     {
         $news->delete();
 

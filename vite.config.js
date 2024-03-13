@@ -51,6 +51,7 @@ export default defineConfig({
                 "resources/js/main_layout/news/jquery.ajaxchimp.min.js",
                 "resources/js/main_layout/news/plugins.js",
                 "resources/js/main_layout/news/main.js",
+                'resources/js/admin/news.js',
             ],
             refresh: true,
         }),

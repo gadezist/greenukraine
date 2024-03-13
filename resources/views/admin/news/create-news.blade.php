@@ -17,22 +17,23 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="inputName">Title</label>
-                                <input type="text" id="inputName" name="title" class="form-control @error('title') is-invalid @enderror">
+                                <input value="{{ old('title') }}" type="text" id="inputName" name="title" class="form-control @error('title') is-invalid @enderror">
                                 @error('title') <small class="text-danger">{{ $message }}</small>@enderror
                             </div>
                             <div class="form-group">
                                 <label for="editor">Content</label>
-                                <textarea id="editor" name="content"></textarea>
+                                <textarea id="editor" name="content">{{ old('content') }}</textarea>
                                 @error('content') <small class="text-danger">{{ $message }}</small>@enderror
                             </div>
                             <div class="form-group">
                                 <label for="inputAuthor">Author</label>
-                                <input name="author" type="text" id="inputAuthor" class="form-control @error('author') is-invalid @enderror">
+                                <input value="{{ old('author') }}" name="author" type="text" id="inputAuthor" class="form-control @error('author') is-invalid @enderror">
                                 @error('author') <small class="text-danger">{{ $message }}</small>@enderror
                             </div>
                             <div class="form-group">
+                                <label for="inputAuthor">Main picture</label>
                                 <div class="custom-file">
-                                    <input type="file" accept="image/*, text/*" name="image"/>
+                                    <input value="{{ old('image') }}" type="file" accept="image/*, text/*" name="image"/>
                                 </div>
                                 @error('image') <small class="text-danger">{{ $message }}</small>@enderror
                             </div>

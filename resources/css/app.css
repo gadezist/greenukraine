@@ -9,6 +9,8 @@
 
 .marker-form {
     background: lightgrey;
+    height: 52vh;
+    overflow: auto;
 }
 
 .info-marker {

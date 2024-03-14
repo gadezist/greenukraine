@@ -4,7 +4,7 @@ import {deleteMarkerEvent} from "./delete-marker.js";
 import {editMarkerEvent} from "./edit-marker.js";
 
 export async function initMap() {
-    const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    const osm = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
         maxZoom: 19,
         minZoom:5,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

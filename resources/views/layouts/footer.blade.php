@@ -13,7 +13,6 @@
                             <li><a href="{{ route('home') }}">Home</a></li>
                             <li><a href="{{ route('about') }}">About</a></li>
                             <li><a href="{{ route('map') }}">Map</a></li>
-                            <li><a href="{{ route('partners') }}">Partners</a></li>
                             <li><a href="{{ route('actual') }}">Actual</a></li>
                             <li><a href="{{ route('contact') }}">Contact</a></li>
                         </ul>

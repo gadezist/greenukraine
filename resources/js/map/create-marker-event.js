@@ -22,9 +22,11 @@ export async function createMarkerEvent(map, drawnItems) {
 
             // Add reference to map
             var container = L.DomUtil.create('div', 'info panel parcel-map-info-panel');
+
             let form = document.getElementById('marker-create')
-            form.style.display = ""
-            container.innerHTML = form.innerHTML;
+            var clonedForm = form.cloneNode(true);
+            container.appendChild(clonedForm);
+            clonedForm.style.display = "block"
 
             container.querySelector("#create-marker-form").addEventListener("submit", function(event){
                 event.preventDefault()
@@ -52,17 +54,22 @@ export async function createMarkerEvent(map, drawnItems) {
 
             L.DomEvent.disableClickPropagation(container);
             map.customControl = this;
+            map.currentContainer = container;
+
             return container;
         },
         onRemove: function (map) {
             // Remove reference from map
+            map.removeControl(map.currentContainer);
             delete map.customControl;
         },
     });
 
     function handleMarkerCreation() {
+        if (map.currentContainer !== undefined) {
+            map.removeControl(map.currentContainer);
+        }
         let formMarkerPanel = new L.Control.Custom();
-
         formMarkerPanel.addTo(map);
 
         return formMarkerPanel;

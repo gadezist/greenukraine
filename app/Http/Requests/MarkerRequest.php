@@ -35,7 +35,7 @@ class MarkerRequest extends FormRequest
             'crops' => ['nullable', 'string'],
             'damage' => ['nullable', 'string'],
             'geom' => ['nullable'],
-            'expert_report' => ['nullable', File::types(['pdf'])],
+            'expert_report' => ['nullable', File::types(['pdf'])->max('20mb')],
             'level_of_damage' => ['nullable', 'string'],
             'photo' => ['nullable', File::image()->max('20mb')],
         ];

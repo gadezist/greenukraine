@@ -1,5 +1,7 @@
 @extends('admin.layouts.main')
-
+@section('css_admin')
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+@endsection
 @section('content')
         <div class="col-md-6">
             <form method="POST" action="{{ route('admin.update-news', ['news' => $news->id]) }}" enctype="multipart/form-data">
@@ -30,11 +32,22 @@
                                 <input value="{{ $news->author }}" name="author" type="text" id="inputAuthor" class="form-control @error('author') is-invalid @enderror">
                                 @error('author') <small class="text-danger">{{ $message }}</small>@enderror
                             </div>
-                            <div class="form-group">
+                            <div class="form-group border-bottom border-top p-2">
+                                <label for="inputAuthor">Main picture</label>
                                 <div class="custom-file">
-                                    <input type="file" accept="image/*, text/*" name="image"/>
+                                    <input value="{{ old('image') }}" type="file" accept="image/*, text/*" name="image"/>
                                 </div>
                                 @error('image') <small class="text-danger">{{ $message }}</small>@enderror
+                                <div>
+                                    <label for="descr">Description</label>
+                                    <input value="{{ $news->descr_image }}" type="text" id="descr" name="descr_image" class="form-control @error('descr_image') is-invalid @enderror">
+                                    @error('descr_image') <small class="text-danger">{{ $message }}</small>@enderror
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="datepicker">Custom date</label>
+                                <input type="text" id="datepicker" name="custom_date" value="{{ (new DateTime($news->custom_date))->format('m/d/Y') }}">
                             </div>
                             <div class="custom-control custom-checkbox">
                                 <input name="status" type="checkbox" class="custom-control-input" id="customCheck1" @if($news->status) checked @endif value="1">

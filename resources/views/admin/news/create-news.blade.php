@@ -47,7 +47,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="datepicker">Custom date</label>
-                                <input type="text" id="datepicker" name="custom_date">
+                                <input value="{{ old('custom_date') }}" type="text" id="datepicker" name="custom_date">
                             </div>
                             <div class="custom-control custom-checkbox">
                                 <input name="status" type="checkbox" class="custom-control-input" id="customCheck1" value="1">

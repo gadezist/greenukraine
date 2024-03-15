@@ -20,15 +20,15 @@
             <div class=" col-md-3 col-sm-3 col logo_section">
                 <div class="full">
                     <div class="center-desk">
-                        <div class="logo row justify-between d-flex align-items-center" style="width: 500px">
+                        <div class="logo row justify-between d-flex align-items-center">
                             <a href="{{ route('home') }}">
-                                <h1 class="text-green-700">Green Ukraine</h1>
+                                <img class="logo-hor" src="{{ asset('logo_horizontal.png') }}" alt="Green Ukraine">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flex">
+            <div class="flex header-main-menu">
                 <!-- Navigation Links -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -59,7 +59,7 @@
             </div>
 
             <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
+            <div class="hidden sm:flex sm:items-center sm:ms-6 header-main-profile">
                 @auth
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">

@@ -48,6 +48,9 @@ export async function createMarkerEvent(map, drawnItems) {
                     success: function (response) {
                         map.removeControl(customControl);
                         toastr.success('Point was created');
+                    },
+                    error: function (error) {
+                        console.log(error);
                     }
                 })
             });

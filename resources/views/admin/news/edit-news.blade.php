@@ -47,7 +47,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="datepicker">Custom date</label>
-                                <input type="text" id="datepicker" name="custom_date" value="{{ (new DateTime($news->custom_date))->format('m/d/Y') }}">
+                                <input type="text" id="datepicker" name="custom_date" value="@if($news->custom_date) {{ (new DateTime($news->custom_date))->format('m/d/Y') }} @endif">
                             </div>
                             <div class="custom-control custom-checkbox">
                                 <input name="status" type="checkbox" class="custom-control-input" id="customCheck1" @if($news->status) checked @endif value="1">

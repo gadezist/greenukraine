@@ -45,7 +45,7 @@
                                         <div class="col-lg-4">
                                             <div class="single-bottom mb-35">
                                                 <div class="trend-bottom-img mb-30">
-                                                    <img style="height: 250px" src="{{ Storage::url($post->image) }}" alt="">
+                                                    <img style="height: 200px" src="{{ Storage::url($post->image) }}" alt="">
                                                 </div>
                                                 <div class="trend-bottom-cap">
                                                     <h4><a href="{{ route('post', ['post' => $post->id]) }}">{{ $post->title }}</a></h4>

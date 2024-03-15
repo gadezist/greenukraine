@@ -39,7 +39,7 @@
                         <h3 style="word-wrap: break-word;">{{ $post->title }}</h3>
                     </div>
                     <div class="mb-20">
-                        <span style="color: #506172">@if($post->custom_date) {{ (new DateTime($post->custom_date))->format('l jS \of F Y') }} @else {{ $post->created_at->format('d.m.Y') }} @endif</span>
+                        <span style="color: #506172">@if($post->custom_date) {{ (new DateTime($post->custom_date))->format('l jS \of F Y') }} @else {{ $post->created_at->format('l jS \of F Y') }} @endif</span>
                     </div>
                     <div>
                         {!! $post->content !!}

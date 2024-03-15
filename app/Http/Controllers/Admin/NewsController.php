@@ -13,8 +13,21 @@ class NewsController
 {
     public function index(): View|\Illuminate\Foundation\Application|Factory|Application
     {
+        $posts = News::orderBy('created_at', 'desc')->get();
+//        usort($posts, function ($a, $b) {
+//            if ($a->custom_date && $b->custom_date) {
+//                return ($a->custom_date > $b->custom_date) ? -1 : 1;
+//            } else if($a->custom_date) {
+//                return ($a->custom_date > $b->created_at) ? -1 : 1;
+//            } else if ($b->custom_date) {
+//                return ($a->created_at > $b->custom_date) ? -1 : 1;
+//            } else {
+//                return ($a->created_at > $b->created_at) ? -1 : 1;
+//            }
+//        });
+
         return view('admin.news.news', [
-            'posts' => News::all(),
+            'posts' => $posts,
         ]);
     }
 
@@ -34,6 +47,7 @@ class NewsController
         $filePath = $image->store('public');
 
         $validatedData = $newsRequest->validated();
+
         $validatedData['image'] = $filePath;
 
         News::create($validatedData);

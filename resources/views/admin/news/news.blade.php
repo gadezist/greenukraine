@@ -20,7 +20,7 @@
         <div class="card-body p-0">
             <table class="table table-striped projects">
                 <thead>
-                <tr>
+                <tr class="text-center">
                     <th style="width: 1%">
                         ID
                     </th>
@@ -33,6 +33,9 @@
                     <th>
                         Date
                     </th>
+                    <th>
+                        Custom Date
+                    </th>
                     <th style="width: 8%" class="text-center">
                         Status
                     </th>
@@ -42,7 +45,7 @@
                 </thead>
                 <tbody>
                 @foreach($posts as $post)
-                    <tr>
+                    <tr class="text-center">
                         <td>
                             {{ $post->id }}
                         </td>
@@ -52,10 +55,13 @@
                         <td>
                             {{ $post->author }}
                         </td>
-                        <td>
-                            {{ $post->created_at->format('d.m.YY') }}
+                        <td class="text-center">
+                            {{ $post->created_at->format('d.m.Y') }}
                         </td>
-                        <td class="project-state">
+                        <td>
+                            @if($post->custom_date) {{ (new DateTime($post->custom_date))->format('d.m.Y') }} @else - @endif
+                        </td>
+                        <td>
                             @if($post->status)
                                 <span class="badge badge-success">Active</span>
                             @else

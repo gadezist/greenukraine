@@ -41,7 +41,7 @@ use \Illuminate\Support\Facades\Route;
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
     <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
 
-    @yield('css')
+    @yield('css_admin')
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">

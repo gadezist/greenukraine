@@ -32,90 +32,42 @@
                             <!-- Trending Top -->
                             <div class="trending-top mb-30">
                                 <div class="trend-top-img">
-                                    <img src="{{ asset('images/news/trending_top.jpg') }}" alt="">
+                                    <img src="{{ Storage::url($posts->first()->image) }}" alt="">
                                     <div class="trend-top-cap">
-                                        <h2><a href="{{ route('post') }}">Welcome To The Best Model Winner<br> Contest At Look of the year</a></h2>
+                                        <h2><a href="{{ route('post', ['post' => $posts->first()->id]) }}">{{ $posts->first()->title }}</a></h2>
                                     </div>
                                 </div>
                             </div>
                             <!-- Trending Bottom -->
                             <div class="trending-bottom">
                                 <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="single-bottom mb-35">
-                                            <div class="trend-bottom-img mb-30">
-                                                <img src="{{ asset('images/news/trending_bottom1.jpg') }}" alt="">
-                                            </div>
-                                            <div class="trend-bottom-cap">
-                                                <h4><a href="details.html">Get the Illusion of Fuller Lashes by “Mascng.”</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-bottom mb-35">
-                                            <div class="trend-bottom-img mb-30">
-                                                <img src="{{ asset('images/news/trending_bottom2.jpg') }}" alt="">
-                                            </div>
-                                            <div class="trend-bottom-cap">
-                                                <h4><h4><a href="details.html">Get the Illusion of Fuller Lashes by “Mascng.”</a></h4></h4>
+                                    @foreach($posts->slice(1, 3) as $post)
+                                        <div class="col-lg-4">
+                                            <div class="single-bottom mb-35">
+                                                <div class="trend-bottom-img mb-30">
+                                                    <img style="height: 250px" src="{{ Storage::url($post->image) }}" alt="">
+                                                </div>
+                                                <div class="trend-bottom-cap">
+                                                    <h4><a href="{{ route('post', ['post' => $post->id]) }}">{{ $post->title }}</a></h4>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-bottom mb-35">
-                                            <div class="trend-bottom-img mb-30">
-                                                <img src="{{ asset('images/news/trending_bottom3.jpg') }}" alt="">
-                                            </div>
-                                            <div class="trend-bottom-cap">
-                                                <h4><a href="details.html"> Welcome To The Best Model Winner Contest</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                         <!-- Riht content -->
                         <div class="col-lg-4">
-                            <div class="trand-right-single d-flex">
-                                <div class="trand-right-img">
-                                    <img src="{{ asset('images/news/right1.jpg') }}" alt="">
+                            @foreach($posts->slice(4) as $post)
+                                <div class="trand-right-single d-flex">
+                                    <div style="min-width: 200px" class="trand-right-img">
+                                        <img style="width: 200px" src="{{ Storage::url($post->image) }}" alt="">
+                                    </div>
+                                    <div class="trand-right-cap">
+                                        <h4><a href="{{ route('post', ['post' => $post->id]) }}">{{ $post->title }}</a></h4>
+                                    </div>
                                 </div>
-                                <div class="trand-right-cap">
-                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="trand-right-single d-flex">
-                                <div class="trand-right-img">
-                                    <img src="{{ asset('images/news/right2.jpg') }}" alt="">
-                                </div>
-                                <div class="trand-right-cap">
-                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="trand-right-single d-flex">
-                                <div class="trand-right-img">
-                                    <img src="{{ asset('images/news/right3.jpg') }}" alt="">
-                                </div>
-                                <div class="trand-right-cap">
-                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="trand-right-single d-flex">
-                                <div class="trand-right-img">
-                                    <img src="{{ asset('images/news/right4.jpg') }}" alt="">
-                                </div>
-                                <div class="trand-right-cap">
-                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="trand-right-single d-flex">
-                                <div class="trand-right-img">
-                                    <img src="{{ asset('images/news/right5.jpg') }}" alt="">
-                                </div>
-                                <div class="trand-right-cap">
-                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

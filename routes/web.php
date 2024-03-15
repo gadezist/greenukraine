@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActualController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\Map\MarkerController;
@@ -34,13 +35,8 @@ Route::get('/partners', function () {
     return view('partners.partners');
 })->name('partners');
 
-Route::get('/actual', function () {
-    return view('actual.actual');
-})->name('actual');
-
-Route::get('/post', function () {
-    return view('actual.post');
-})->name('post');
+Route::get('/actual', [ActualController::class, 'index'])->name('actual');
+Route::get('/actual/{post}', [ActualController::class, 'post'])->name('post');
 
 Route::get('/team', function () {
     return view('team.team');

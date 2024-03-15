@@ -9,6 +9,8 @@ $(function () {
         .catch( error => {
             console.error( error );
         });
+
+    $( "#datepicker" ).datepicker();
 });
 
 

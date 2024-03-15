@@ -18,6 +18,8 @@ class News extends Model
         'author',
         'status',
         'image',
+        'custom_date',
+        'descr_image',
     ];
 
     /**
@@ -25,5 +27,6 @@ class News extends Model
      */
     protected $casts = [
         'status' => 'boolean',
+        'custom_date' => 'datetime',
     ];
 }

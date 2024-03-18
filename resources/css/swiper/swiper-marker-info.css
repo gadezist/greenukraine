@@ -1,0 +1,73 @@
+.swiper {
+    width: 400px;
+    height: 200px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заповнює всю площу зображення */
+    object-position: center; /* Вирівнює зображення по центру */
+    cursor: pointer;
+}
+
+#fullscreen-swiper {
+    display: none;
+    height: 90vh;
+    overflow: hidden;
+    position: absolute;
+    top: 5%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+}
+
+#fullscreen-swiper .swiper-slide {
+    background: none;
+}
+
+#fullscreen-swiper .swiper-slide img {
+    height: 100%;
+    object-fit: contain;
+    cursor: default;
+}
+
+#fullscreen-swiper-backdrop {
+    background: #000;
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    opacity: 0.7;
+
+}
+#fullscreen-swiper-close {
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 1px 6px 0;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    z-index: 10000;
+}
+
+.no-scroll {height: 100%; overflow: hidden}
+
+#fullscreen-swiper .swiper-pagination-bullets {
+    bottom: -2px;
+}
+
+#fullscreen-swiper .swiper-pagination-bullet {
+    background: #fff;
+    opacity: .5;
+}
+
+#fullscreen-swiper .swiper-pagination-bullet-active {
+    background: #007aff;
+}

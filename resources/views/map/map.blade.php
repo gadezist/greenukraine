@@ -1,7 +1,7 @@
 
 <x-app-layout :mapHeader="true">
-    @section('header_scripts')
-        @vite(['resources/js/map/map.js'])
+    @section('css_section')
+        @vite(['resources/css/swiper/swiper-marker-info.css'])
     @endsection
 
     <div id="map" class="map"></div>
@@ -10,10 +10,19 @@
 
         </x-create-marker-form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- holder for the fullscreen slider -->
+    <div id="fullscreen-swiper"></div>
+    <div id="fullscreen-swiper-backdrop"></div>
 
     <script>
         window.userRole = ("{{ $user_role }}")
     </script>
+
+
+    @section('footer_scripts')
+        @vite(['resources/js/swiper/swiper-marker-info.js'])
+        @vite(['resources/js/map/map.js'])
+    @endsection
 </x-app-layout>
 

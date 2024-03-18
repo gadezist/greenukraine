@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .map {
-    height: 92vh;
+    height: 91vh;
     z-index: 0;
 }
 
@@ -28,11 +28,14 @@
 
 .info-marker {
     background: white;
+    overflow: auto;
+    height: 70vh;
+    max-height: 750px;
+    width: 620px;
 }
 
 .info-marker table {
     border-collapse: collapse;
-    width: 100%;
 }
 
 .info-marker caption {

@@ -2,6 +2,7 @@ import {drawBoundary, drawMarkers} from "./draw-geo-json.js";
 import {createMarkerEvent} from "./create-marker-event.js";
 import {deleteMarkerEvent} from "./delete-marker.js";
 import {editMarkerEvent} from "./edit-marker.js";
+import {closeContainerEvent} from "./close-container-event.js";
 
 export async function initMap() {
     const osm = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
@@ -40,8 +41,8 @@ export async function initMap() {
     const baseMap = {
         'Google': google,
         'Google hybrid': googleHybrid,
-        'Osm': osm,
-        'Mapbox': mapbox
+        'Mapbox': mapbox,
+        'Osm': osm
     }
 
     let map = L.map('map', {
@@ -78,4 +79,5 @@ export async function initMap() {
     await createMarkerEvent(map, drawnItems)
     await deleteMarkerEvent(map, drawnItems)
     await editMarkerEvent(map, drawnItems)
+    await closeContainerEvent(map)
 }

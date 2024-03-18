@@ -53,6 +53,7 @@ export default defineConfig({
                 "resources/js/main_layout/news/main.js",
                 'resources/js/admin/news.js',
                 'resources/js/gtag.js',
+                'resources/js/swiper/swiper-marker-info.js',
             ],
             refresh: true,
         }),

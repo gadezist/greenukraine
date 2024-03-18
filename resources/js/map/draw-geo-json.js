@@ -5,7 +5,9 @@ L.Control.MarkerInfo = L.Control.extend({
     },
     onAdd: function (map) {
         var container = L.DomUtil.create('div', 'info panel parcel-map-info-panel');
+
         map.customControl = this;
+        map.currentContainer = container;
 
         L.DomEvent.disableClickPropagation(container);
 
@@ -13,6 +15,7 @@ L.Control.MarkerInfo = L.Control.extend({
     },
     onRemove: function(map) {
         delete map.customControl;
+        map.removeControl(map.currentContainer);
     },
     updateContent: function (props, container) {
         let response = fetch('/marker/get/' + props.id, {
@@ -39,32 +42,24 @@ export async function drawBoundary(url, map, layerControl)
         let ukraine = L.geoJSON(json.data, {
             "fillOpacity": 0
         }).addTo(map);
-
-        // let ukraineGroup = L.layerGroup([ukraine]);
-        // let overlayMaps = {
-        //     "Ukraine": ukraineGroup
-        // };
         layerControl.addOverlay(ukraine, 'Ukraine').addTo(map);
-        });
+    });
 }
-
-let markerInfo = new L.Control.MarkerInfo()
-
 export async function drawMarkers(map, drawnItems)
 {
+    map.currentControl = new L.Control.MarkerInfo()
+
     fetch('/markers/all', {
         method: 'POST',
     }).then(function(response) {
         return response.json();
     }).then(function(json) {
         console.log(json)
-        closeMarkerInfoEvent(map);
         L.geoJSON(json.markers, {
             pointToLayer: function (feature, latlng) {
                 let marker = L.marker(latlng)
                 marker.on('click', function (e) {
-
-                    let markerContainer = markerInfo.addTo(map);
+                    let markerContainer = map.currentControl.addTo(map);
                     markerContainer.updateContent(feature.properties, markerContainer)
 
                 });
@@ -75,8 +70,3 @@ export async function drawMarkers(map, drawnItems)
     });
 }
 
-async function closeMarkerInfoEvent(map) {
-    $(document).on('click', '#close-button', function() {
-        map.removeControl(markerInfo);
-    });
-}

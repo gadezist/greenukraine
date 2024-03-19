@@ -1,4 +1,7 @@
 <x-app-layout>
+    @section('css_section')
+        @vite(["resources/css/main_layout/about.css"])
+    @endsection
     <!-- start slider section -->
     <div id="top_section" class=" banner_main">
         <div class="container">
@@ -16,7 +19,7 @@
                                         <div class="bluid">
                                             <h1 style="color: white">SAVE UKRAINIAN<br style="color: darkgreen">LANDS TODAY</h1>
                                             <p style="color: white; font-size: 24px">Over 50,000 square kilometers of Ukraine's agricultural soils are damaged by war</p>
-                                            <a class="read_more" href="{{ route('about') }}">About</a><a class="read_more" href="{{ route('actual') }}">Actual</a>
+                                            <a class="read_more" href="#about">About</a><a class="read_more" href="{{ route('actual') }}">Actual</a>
                                         </div>
                                     </div>
                                 </div>
@@ -47,163 +50,34 @@
         </div>
     </div>
     <!-- end slider section -->
-    <!-- we_do -->
-{{--    <div class="we_do">--}}
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-md-12">--}}
-{{--                    <div class="titlepage text_align_center">--}}
-{{--                        <h2>What we do </h2>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-md-12">--}}
-{{--                    <div id="we1" class="carousel slide" data-ride="carousel">--}}
-{{--                        <ol class="carousel-indicators">--}}
-{{--                            <li data-target="#we1" data-slide-to="0" class="active"></li>--}}
-{{--                            <li data-target="#we1" data-slide-to="1"></li>--}}
-{{--                            <li data-target="#we1" data-slide-to="2"></li>--}}
-{{--                            <li data-target="#we1" data-slide-to="3"></li>--}}
-{{--                        </ol>--}}
-{{--                        <div class="carousel-inner">--}}
-{{--                            <div class="carousel-item active">--}}
-{{--                                <div class="container-fluid">--}}
-{{--                                    <div class="carousel-caption we1_do">--}}
-{{--                                        <div class="row">--}}
-{{--                                            <div class="col-md-4">--}}
-{{--                                                <div id="bo_ho" class="we_box text_align_left">--}}
-{{--                                                    <i><img src="images/we1.png" alt="#"/></i>--}}
-{{--                                                    <h3>website <br>development</h3>--}}
-{{--                                                    <p>many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which--}}
-{{--                                                    </p>--}}
-{{--                                                    <a class="read_more" href="we_do">Read More</a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="col-md-4">--}}
-{{--                                                <div id="bo_ho" class="we_box text_align_left">--}}
-{{--                                                    <i><img src="images/we1.png" alt="#"/></i>--}}
-{{--                                                    <h3>website <br>development</h3>--}}
-{{--                                                    <p>many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which--}}
-{{--                                                    </p>--}}
-{{--                                                    <a class="read_more" href="we_do">Read More</a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="col-md-4">--}}
-{{--                                                <div id="bo_ho" class="we_box text_align_left">--}}
-{{--                                                    <i><img src="images/we1.png" alt="#"/></i>--}}
-{{--                                                    <h3>website <br>development</h3>--}}
-{{--                                                    <p>many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which--}}
-{{--                                                    </p>--}}
-{{--                                                    <a class="read_more" href="we_do">Read More</a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="carousel-item">--}}
-{{--                                <div class="container-fluid">--}}
-{{--                                    <div class="carousel-caption we1_do">--}}
-{{--                                        <div class="row">--}}
-{{--                                            <div class="col-md-4">--}}
-{{--                                                <div id="bo_ho" class="we_box text_align_left">--}}
-{{--                                                    <i><img src="images/we1.png" alt="#"/></i>--}}
-{{--                                                    <h3>website <br>development</h3>--}}
-{{--                                                    <p>many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which--}}
-{{--                                                    </p>--}}
-{{--                                                    <a class="read_more" href="we_do">Read More</a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="col-md-4">--}}
-{{--                                                <div id="bo_ho" class="we_box text_align_left">--}}
-{{--                                                    <i><img src="images/we2.png" alt="#"/></i>--}}
-{{--                                                    <h3>App <br>development</h3>--}}
-{{--                                                    <p>many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which--}}
-{{--                                                    </p>--}}
-{{--                                                    <a class="read_more" href="we_do">Read More</a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="col-md-4">--}}
-{{--                                                <div id="bo_ho" class="we_box text_align_left">--}}
-{{--                                                    <i><img src="images/we3.png" alt="#"/></i>--}}
-{{--                                                    <h3>website <br>design</h3>--}}
-{{--                                                    <p>many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which--}}
-{{--                                                    </p>--}}
-{{--                                                    <a class="read_more" href="we_do">Read More</a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="carousel-item">--}}
-{{--                                <div class="container-fluid">--}}
-{{--                                    <div class="carousel-caption we1_do">--}}
-{{--                                        <div class="row">--}}
-{{--                                            <div class="col-md-4">--}}
-{{--                                                <div id="bo_ho" class="we_box text_align_left">--}}
-{{--                                                    <i><img src="images/we1.png" alt="#"/></i>--}}
-{{--                                                    <h3>website <br>development</h3>--}}
-{{--                                                    <p>many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which--}}
-{{--                                                    </p>--}}
-{{--                                                    <a class="read_more" href="we_do">Read More</a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="col-md-4">--}}
-{{--                                                <div id="bo_ho" class="we_box text_align_left">--}}
-{{--                                                    <i><img src="images/we1.png" alt="#"/></i>--}}
-{{--                                                    <h3>website <br>development</h3>--}}
-{{--                                                    <p>many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which--}}
-{{--                                                    </p>--}}
-{{--                                                    <a class="read_more" href="we_do">Read More</a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="col-md-4">--}}
-{{--                                                <div id="bo_ho" class="we_box text_align_left">--}}
-{{--                                                    <i><img src="images/we1.png" alt="#"/></i>--}}
-{{--                                                    <h3>website <br>development</h3>--}}
-{{--                                                    <p>many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which--}}
-{{--                                                    </p>--}}
-{{--                                                    <a class="read_more" href="we_do">Read More</a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <a class="carousel-control-prev" href="#we1" role="button" data-slide="prev">--}}
-{{--                            <i class="fa fa-angle-left" aria-hidden="true"></i>--}}
-{{--                            <span class="sr-only">Previous</span>--}}
-{{--                        </a>--}}
-{{--                        <a class="carousel-control-next" href="#we1" role="button" data-slide="next">--}}
-{{--                            <i class="fa fa-angle-right" aria-hidden="true"></i>--}}
-{{--                            <span class="sr-only">Next</span>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-    <!-- end we_do -->
+
     <!-- about -->
     <div id="about" class="about" style="height: 100% !important;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage text_align_center">
-                        <h2>About Us</h2>
-                        <p>Our project takes on one of the most extensive and ambitious challenges of our time: the research, analysis, and systematization of the war-damaged agricultural lands of Ukraine, and the development of remediation methods for these lands.</p>
+                        <h2 class="text-center mb-4">About Us</h2>
+                        <p>The Green Ukraine project takes on one of the most extensive and ambitious ecological challenges of our time: the research, analysis, and systematization of the war-damaged agricultural lands of Ukraine, and the development of restoration methods for these lands.</p>
 
-                        <p>Ukraine stands out on the European map with its unique agricultural potential, possessing some of the most fertile soils in the world. This feature establishes it as a key global agro-exporter, feeding people all over the globe, especially in Asia and Africa, where the threat of hunger reaches critical levels. However, as a result of Russian military actions, Ukraine's biosphere and soils have suffered catastrophic damage, which not only threatens food security but also contributes significantly to global climate change, undermining the efforts of the international community to mitigate climate change.</p>
+                        <p>Ukraine stands out on the European map with its unique agricultural potential, possessing some of the most fertile soils in the world. This makes Ukraine a key global agro-exporter of wheat, barley, corn, and sunflower seeds feeding millions of people all over the globe, especially in Asia and Africa, where the threat of hunger reaches critical levels.</p>
+                        <img src="{{ asset('about') }}" alt="">
+                        <p>However, as a result of the Russian military invasion, Ukraine's biosphere including air, water, land, and soils have suffered catastrophic damage, which many refer to as “ecocide”. It not only threatens food security but also contributes significantly to global climate change, undermining the efforts of the international community to mitigate climate change. Over five million hectares of agricultural land have suffered from physical damage, biodiversity disruptions, and the impact of organic and chemical substances, leading to soil degradation and jeopardizing their future fertility.</p>
+                        <img src="{{ asset('about') }}" alt="">
+                        <p>Our mission is simple: we want to understand how Ukraine's farmlands have been hurt by war and figure out the best ways to heal them.</p>
 
-                        <p>Over five million hectares of agricultural land have suffered from physical damage, biodiversity disruptions, and the impact of organic and chemical substances, leading to soil degradation and jeopardizing their future fertility. Within our project, we conduct analyses of the soil's chemical composition, study the dynamics of these changes, and create a database for soil analysis. Special attention is given to developing remediation techniques and exploring the potential for carbon sequestration in the most affected areas.</p>
+                        <p>Within our project, we conduct analyses of the soil's chemical composition, study the dynamics of these changes, and create a database for soil analysis in our <a href="{{ route('map') }}">Map page.</a> Special attention will be given to developing remediation techniques and exploring the potential for carbon sequestration in the most affected areas.</p>
 
-                        <p>Faced with an unprecedented scale of challenges, we see the vital need for global teamwork with top scientific bodies, government and NGO partners, Ukrainian farmers, private companies, and other stakeholders.</p>
-
+                        <p>We're tackling huge challenges, unlike anything before. In the world today, there's no playbook or prior scientific experience for rehabilitating agricultural lands damaged by war on such a scale, meaning we're charting new territory with every step.</p>
+                        <img src="{{ asset('about') }}" alt="">
+                        <p>To make a real difference, we believe in joining forces with the best minds around the world. This means teaming up with leading scientists, governments, NGOs, the hardworking farmers of Ukraine, private businesses, and anyone else who wants to help. It's your chance to be part of something big. It's your chance to be part of something groundbreaking!</p>
+                        <p><span class="bold-text">For Scientists, Researchers and Laboratories:</span> Share your expertise in soil science, ecology, or data analysis. We’re particularly interested in innovative approaches to land rehabilitation and carbon sequestration.<br>
+                            <span class="bold-text">For Governments and NGOs:</span> Partner with us to implement policies and initiatives that support sustainable agricultural practices and land restoration. Your advocacy and funding can propel our efforts forward.<br>
+                            <span class="bold-text">For Ukrainian Farmers:</span> Your firsthand experience is invaluable. Join our network to share insights, participate in soil health monitoring, and implement restoration techniques on your lands.<br>
+                            <span class="bold-text">For Private Companies:</span> Invest in sustainability by supporting our project financially or through services. Whether it's technology, resources, or expertise, your contribution can make a significant impact.<br>
+                            <span class="bold-text">For Volunteers and Global Citizens:</span> Help us spread the word, raise awareness, and mobilize resources. Every effort counts, from social media advocacy to fundraising.</p>
+                        <p class="extbold-text "><a href="{{ route('contact') }}">Join our initiative and help us face these challenges together!</a></p>
                         <p>Initiated in Switzerland with support from ETH Zurich and Bern University of Applied Sciences as part of the CAS Rebuild Ukraine program, our project aims to make a significant contribution to global efforts in ecosystem restoration and combating the climate crisis.</p>
-
                     </div>
                 </div>
             </div>

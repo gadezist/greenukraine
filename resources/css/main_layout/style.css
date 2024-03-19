@@ -242,7 +242,7 @@ button {
 }
 
 .text_align_center {
-     text-align: center;
+     text-align: justify;
 }
 
 .text_align_left {
@@ -540,11 +540,11 @@ ul.email li i {
 /** about **/
 
 .about {
-     background: darkgreen;
+     background: #557F39;
      background-position: center;
      background-repeat: no-repeat;
      height: 100vh;
-     padding: 90px 0;
+     padding: 50px 0;
 }
 
 .about .titlepage::before {

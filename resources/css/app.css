@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .map {
-    height: 91vh;
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 120px);
     z-index: 0;
 }
 
@@ -12,10 +16,13 @@
     height: 73vh;
     overflow: auto;
     max-height: 700px;
+    width: 400px;
 }
 
 .logo-hor {
     height: 90px;
+    margin-top: 10px;
+    min-width: 400px;
 }
 
 .header-main-menu {
@@ -86,3 +93,61 @@ html {
     height: 5rem;
 }
 
+#top_section {
+    height: 80vh !important;
+}
+
+@font-face {
+    font-family: 'Helvetica Light';
+    src: url('/public/gu_fonts/HelveticaNowDisplay-Light.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica Black';
+    src: url('/public/gu_fonts/HelveticaNowDisplay-Black.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica BlackIta';
+    src: url('/public/gu_fonts/HelveticaNowDisplay-BlackIta.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica Bold';
+    src: url('/public/gu_fonts/HelveticaNowDisplay-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica ExtBdIta';
+    src: url('/public/gu_fonts/HelveticaNowDisplay-ExtBdIta.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica ExtBlk';
+    src: url('/public/gu_fonts/HelveticaNowDisplay-ExtBlk.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica ExtLt';
+    src: url('/public/gu_fonts/HelveticaNowDisplay-ExtLt.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica Medium';
+    src: url('/public/gu_fonts/HelveticaNowDisplay-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica Regular';
+    src: url('/public/gu_fonts/HelveticaNowDisplay-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

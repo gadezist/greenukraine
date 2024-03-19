@@ -22,7 +22,7 @@
                     <div class="center-desk">
                         <div class="logo row justify-between d-flex align-items-center">
                             <a href="{{ route('home') }}">
-                                <img class="logo-hor" src="{{ asset('logo_horizontal.png') }}" alt="Green Ukraine">
+                                <img class="logo-hor" src="{{ asset('logo_cut.png') }}" alt="Green Ukraine">
                             </a>
                         </div>
                     </div>

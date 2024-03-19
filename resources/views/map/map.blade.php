@@ -12,8 +12,8 @@
     </div>
 
     <!-- holder for the fullscreen slider -->
-    <div id="fullscreen-swiper"></div>
-    <div id="fullscreen-swiper-backdrop"></div>
+        <div id="fullscreen-swiper-backdrop"></div>
+        <div id="fullscreen-swiper"></div>
 
     <script>
         window.userRole = ("{{ $user_role }}")

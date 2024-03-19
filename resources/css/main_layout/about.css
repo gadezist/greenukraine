@@ -1,0 +1,36 @@
+.titlepage {
+    font-family: "Helvetica Medium";
+}
+
+.about {
+    background: #557F39;
+    /*background: linear-gradient(to bottom, #557F39, 90%, #88a574);*/
+}
+
+.about .titlepage p{
+    font-size: 20px;
+}
+
+.bold-text {
+    font-family: "Helvetica Bold";
+    color: #04143A;
+}
+
+.about .titlepage a {
+    font-family: "Helvetica Bold";
+    color: #04143A;
+}
+
+.about .titlepage .extbold-text a {
+    font-family: "Helvetica ExtBlk";
+    color: #04143A;
+}
+
+.extbold-text {
+    font-family: "Helvetica ExtBlk";
+    color: #04143A;
+}
+
+.about .titlepage a:hover {
+    color: #003396;
+}

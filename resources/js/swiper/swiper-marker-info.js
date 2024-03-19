@@ -5,9 +5,7 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 function initSwiper() {
     const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        // direction: 'vertical',
-        loop: true,
+        loop: false,
         spaceBetween: 10,
         slidesPerView: 3,
         simulateTouch: true,
@@ -34,13 +32,13 @@ function fullScreen() {
     });
 
     function openFullscreenSwiper(initialSlideNumber) {
-        var mainSwiperMarkup = $('.swiper').html();
+        let mainSwiperMarkup = $('.swiper').html();
 
         $('#fullscreen-swiper')
             .append(mainSwiperMarkup + "<div id='fullscreen-swiper-close'>X</div>")
             .fadeIn();
 
-        var fullscreenSwiper = new Swiper('#fullscreen-swiper', {
+        let fullscreenSwiper = new Swiper('#fullscreen-swiper', {
             slidesPerView: 1,
             centeredSlides: true,
             paginationClickable: true,
@@ -61,10 +59,12 @@ function fullScreen() {
         $('#fullscreen-swiper-backdrop').fadeIn();
         $('body, html').addClass('no-scroll');
 
-        $('#fullscreen-swiper-close').on('click', function() {
-            $('#fullscreen-swiper').hide().empty();
-            $('#fullscreen-swiper-backdrop').fadeOut();
-            $('body, html').removeClass('no-scroll');
+        $('#fullscreen-swiper .swiper-slide, #fullscreen-swiper-close').on('click', function(e) {
+            if (e.target.tagName !== 'IMG') {
+                $('#fullscreen-swiper').hide().empty();
+                $('#fullscreen-swiper-backdrop').fadeOut();
+                $('body, html').removeClass('no-scroll');
+            }
         });
 
     }

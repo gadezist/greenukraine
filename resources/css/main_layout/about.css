@@ -34,3 +34,8 @@
 .about .titlepage a:hover {
     color: #003396;
 }
+
+.about .titlepage figure {
+    margin-top: 25px;
+    color: #04143A;
+}

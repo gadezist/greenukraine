@@ -25,15 +25,22 @@
                         <p>The Green Ukraine project takes on one of the most extensive and ambitious ecological challenges of our time: the research, analysis, and systematization of the war-damaged agricultural lands of Ukraine, and the development of restoration methods for these lands.</p>
 
                         <p>Ukraine stands out on the European map with its unique agricultural potential, possessing some of the most fertile soils in the world. This makes Ukraine a key global agro-exporter of wheat, barley, corn, and sunflower seeds feeding millions of people all over the globe, especially in Asia and Africa, where the threat of hunger reaches critical levels.</p>
-                        <img src="{{ asset('about') }}" alt="">
+                        <figure>
+                            <img src="{{ asset('images/about/peter-kleinau.jpg') }}" alt="">
+                            <figcaption>Photo of Ukraine by Peter Kleinau</figcaption>
+                        </figure>
                         <p>However, as a result of the Russian military invasion, Ukraine's biosphere including air, water, land, and soils have suffered catastrophic damage, which many refer to as “ecocide”. It not only threatens food security but also contributes significantly to global climate change, undermining the efforts of the international community to mitigate climate change. Over five million hectares of agricultural land have suffered from physical damage, biodiversity disruptions, and the impact of organic and chemical substances, leading to soil degradation and jeopardizing their future fertility.</p>
-                        <img src="{{ asset('about') }}" alt="">
+                        <figure>
+                            <img src="{{ asset('images/about/dominik-kiss.jpg') }}" alt="">
+                            <figcaption>Photo by Dominik Kiss</figcaption>
+                        </figure>
                         <p>Our mission is simple: we want to understand how Ukraine's farmlands have been hurt by war and figure out the best ways to heal them.</p>
-
                         <p>Within our project, we conduct analyses of the soil's chemical composition, study the dynamics of these changes, and create a database for soil analysis in our <a href="{{ route('map') }}">Map page.</a> Special attention will be given to developing remediation techniques and exploring the potential for carbon sequestration in the most affected areas.</p>
-
                         <p>We're tackling huge challenges, unlike anything before. In the world today, there's no playbook or prior scientific experience for rehabilitating agricultural lands damaged by war on such a scale, meaning we're charting new territory with every step.</p>
-                        <img src="{{ asset('about') }}" alt="">
+                        <figure>
+                            <img src="{{ asset('images/about/Rau-11.jpg') }}" alt="">
+                            <figcaption>Scientists of Zurich ETH, Ukrainian SNAU and UK RAU studying the soil samples. Photo by Olena Melnyk</figcaption>
+                        </figure>
                         <p>To make a real difference, we believe in joining forces with the best minds around the world. This means teaming up with leading scientists, governments, NGOs, the hardworking farmers of Ukraine, private businesses, and anyone else who wants to help. It's your chance to be part of something big. It's your chance to be part of something groundbreaking!</p>
                         <p><span class="bold-text">For Scientists, Researchers and Laboratories:</span> Share your expertise in soil science, ecology, or data analysis. We’re particularly interested in innovative approaches to land rehabilitation and carbon sequestration.<br>
                             <span class="bold-text">For Governments and NGOs:</span> Partner with us to implement policies and initiatives that support sustainable agricultural practices and land restoration. Your advocacy and funding can propel our efforts forward.<br>

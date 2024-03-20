@@ -25,15 +25,18 @@
                 </thead>
                 <tbody>
                 @foreach($users as $user)
-{{--                    @if($user->name == 'admin')--}}
-{{--                        @continue--}}
-{{--                    @endif--}}
+                    @if($user->name == 'super_admin')
+                        @continue
+                    @endif
                     <tr data-id="{{ $user->id }}">
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>
                             <div>
                                 <select class="custom-select custom-select-md role-select">
+                                    @if($user->getRoleNames()->first() === null)
+                                        <option selected="selected" value="" disabled>choose role</option>
+                                    @endif
                                     @foreach(\Spatie\Permission\Models\Role::all() as $role)
                                         <option @if($user->getRoleNames()->first() == $role->name) selected @endif value="{{ $role->name }}">
                                             {{ $role->name }}

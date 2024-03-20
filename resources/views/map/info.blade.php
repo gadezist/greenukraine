@@ -61,7 +61,7 @@
                 </div>
             </td>
         </tr>
-        @if(Auth::check() && Auth::user()->hasRole('super-admin'))
+        @if(Auth::check() && Auth::user()->hasAnyRole(['super-admin', 'expert-user']))
             <tr>
                 <th scope="row">Expert report:</th>
                 <td>

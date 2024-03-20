@@ -1,5 +1,5 @@
 
-export async function createMarkerEvent(map, drawnItems) {
+export function createMarkerEvent(map, drawnItems) {
 
     let customControl = null;
     let marker = null;

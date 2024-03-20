@@ -20,6 +20,10 @@ L.Control.MarkerInfo = L.Control.extend({
     updateContent: function (props, container) {
         let response = fetch('/marker/get/' + props.id, {
             method: 'GET',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8',
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
         }).then(function(response) {
             return response.json();
         })
@@ -29,10 +33,14 @@ L.Control.MarkerInfo = L.Control.extend({
 });
 
 
-export async function drawBoundary(url, map, layerControl)
+export function drawBoundary(url, map, layerControl)
 {
     fetch(url, {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
         body: JSON.stringify({
             'filename': 'ua_bound_reg.geojson'
         })
@@ -45,12 +53,16 @@ export async function drawBoundary(url, map, layerControl)
         layerControl.addOverlay(ukraine, 'Ukraine').addTo(map);
     });
 }
-export async function drawMarkers(map, drawnItems)
+export function drawMarkers(map, drawnItems)
 {
     map.currentControl = new L.Control.MarkerInfo()
 
     fetch('/markers/all', {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
     }).then(function(response) {
         return response.json();
     }).then(function(json) {

@@ -4,7 +4,9 @@ import {deleteMarkerEvent} from "./delete-marker.js";
 import {editMarkerEvent} from "./edit-marker.js";
 import {closeContainerEvent} from "./close-container-event.js";
 
-export async function initMap() {
+
+
+export function initMap() {
     let apiMaptilerKey = 'qfW9nHbFDLbnBIr5Grxr';
 
     const osm = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
@@ -66,7 +68,7 @@ export async function initMap() {
 
     L.control.maptilerGeocoding({ apiKey: apiMaptilerKey }).addTo(map);
 
-    await drawBoundary('/get/geo-json', map, layerControl)
+    drawBoundary('/get/geo-json', map, layerControl)
 
     let drawnItems = new L.FeatureGroup();
     map.addLayer(drawnItems);
@@ -87,10 +89,10 @@ export async function initMap() {
         map.addControl(drawControl);
     }
 
-    await drawMarkers(map, drawnItems);
+    drawMarkers(map, drawnItems);
 
-    await createMarkerEvent(map, drawnItems)
-    await deleteMarkerEvent(map, drawnItems)
-    await editMarkerEvent(map, drawnItems)
-    await closeContainerEvent(map)
+    createMarkerEvent(map, drawnItems)
+    deleteMarkerEvent(map, drawnItems)
+    editMarkerEvent(map, drawnItems)
+    closeContainerEvent(map)
 }

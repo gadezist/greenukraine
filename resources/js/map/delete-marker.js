@@ -1,6 +1,6 @@
 
 
-export async function deleteMarkerEvent(map, drawnItems) {
+export function deleteMarkerEvent(map, drawnItems) {
 
     map.on('draw:deleted', function (e) {
         let markers = e.layers;
@@ -9,6 +9,10 @@ export async function deleteMarkerEvent(map, drawnItems) {
             if (layer instanceof L.Marker) {
                 fetch('/admin/marker/delete/' + layer.feature.properties.id, {
                     method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8',
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
                 }).then(function (response) {
                     if (response.status === 200) {
                         toastr.success('Object successful deleted')

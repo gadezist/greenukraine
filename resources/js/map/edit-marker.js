@@ -1,6 +1,6 @@
 
 
-export async function editMarkerEvent(map, drawnItems) {
+export function editMarkerEvent(map, drawnItems) {
 
     map.on('draw:edited', function (e) {
         let markers = e.layers;

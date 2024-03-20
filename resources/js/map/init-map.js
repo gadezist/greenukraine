@@ -5,6 +5,8 @@ import {editMarkerEvent} from "./edit-marker.js";
 import {closeContainerEvent} from "./close-container-event.js";
 
 export async function initMap() {
+    let apiMaptilerKey = 'qfW9nHbFDLbnBIr5Grxr';
+
     const osm = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
         maxZoom: 19,
         minZoom:5,
@@ -38,9 +40,18 @@ export async function initMap() {
         accessToken: 'pk.eyJ1IjoiZ2FkZXppc3QiLCJhIjoiY2x0aWdsMTYwMGZ4NjJpcXFkNjl6Yzd4ayJ9.Qh_8DXg9LY2U7L_SJsu7oQ'
     })
 
+    const mapTiler = L.tileLayer(`https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=${apiMaptilerKey}`,{ //style URL
+        tileSize: 512,
+        zoomOffset: -1,
+        minZoom: 1,
+        attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+        crossOrigin: true
+    })
+
     const baseMap = {
         'Google': google,
         'Google hybrid': googleHybrid,
+        'Map Tiler': mapTiler,
         'Mapbox': mapbox,
         'Osm': osm
     }
@@ -48,10 +59,12 @@ export async function initMap() {
     let map = L.map('map', {
         center: [48.505, 33.09],
         zoom: 7,
-        layers: [osm, google, googleHybrid, mapbox],
+        layers: [osm],
     });
 
     let layerControl = L.control.layers(baseMap).addTo(map);
+
+    L.control.maptilerGeocoding({ apiKey: apiMaptilerKey }).addTo(map);
 
     await drawBoundary('/get/geo-json', map, layerControl)
 

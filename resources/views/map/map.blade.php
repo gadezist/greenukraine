@@ -1,7 +1,10 @@
 
 <x-app-layout :mapHeader="true">
     @section('css_section')
-        @vite(['resources/css/swiper/swiper-marker-info.css'])
+        @vite([
+            'resources/css/swiper/swiper-marker-info.css',
+            'resources/css/map.css',
+            ])
     @endsection
 
     <div id="map" class="map"></div>

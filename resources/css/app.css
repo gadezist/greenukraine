@@ -2,23 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.map {
-    position: fixed;
-    top: 120px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 120px);
-    z-index: 0;
-}
-
-.marker-form {
-    background: lightgrey;
-    height: 73vh;
-    overflow: auto;
-    max-height: 700px;
-    width: 400px;
-}
-
 .logo-hor {
     height: 90px;
     margin-top: 10px;
@@ -31,25 +14,6 @@
 
 .header-main-profile {
     margin-top: 40px;
-}
-
-.info-marker {
-    background: white;
-    overflow: auto;
-    height: 70vh;
-    max-height: 750px;
-    width: 620px;
-}
-
-.info-marker table {
-    border-collapse: collapse;
-}
-
-.info-marker caption {
-    caption-side: top;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
 }
 
 .header-main-layout {

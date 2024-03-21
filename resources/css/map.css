@@ -1,0 +1,46 @@
+.map {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 120px);
+    z-index: 0;
+}
+
+.marker-form {
+    background: lightgrey;
+    height: 73vh;
+    overflow: auto;
+    max-height: 700px;
+    width: 400px;
+}
+
+.info-marker {
+    background: white;
+    overflow: auto;
+    height: 70vh;
+    max-height: 750px;
+    width: 620px;
+}
+
+.info-marker table {
+    border-collapse: collapse;
+}
+
+.info-marker caption {
+    caption-side: top;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#coordinates-map {
+    font-size: 0.8rem;
+    margin-bottom: 11px;
+    color: darkslategrey;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding-top: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+}

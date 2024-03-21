@@ -3,6 +3,7 @@ import {createMarkerEvent} from "./create-marker-event.js";
 import {deleteMarkerEvent} from "./delete-marker.js";
 import {editMarkerEvent} from "./edit-marker.js";
 import {closeContainerEvent} from "./close-container-event.js";
+import {coordinatesMap} from "./coordinates-map.js";
 
 
 
@@ -64,9 +65,9 @@ export function initMap() {
         layers: [osm],
     });
 
-    let layerControl = L.control.layers(baseMap).addTo(map);
-
     L.control.maptilerGeocoding({ apiKey: apiMaptilerKey }).addTo(map);
+
+    let layerControl = L.control.layers(baseMap).addTo(map);
 
     drawBoundary('/get/geo-json', map, layerControl)
 
@@ -85,8 +86,10 @@ export function initMap() {
             featureGroup: drawnItems
         }
     });
+
     if (window.userRole === 'super-admin') {
         map.addControl(drawControl);
+        coordinatesMap(map);
     }
 
     drawMarkers(map, drawnItems);

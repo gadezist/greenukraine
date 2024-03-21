@@ -56,6 +56,7 @@ export default defineConfig({
                 'resources/js/swiper/swiper-marker-info.js',
                 'resources/css/swiper/swiper-marker-info.css',
                 'resources/css/main_layout/about.css',
+                'resources/css/map.css',
             ],
             refresh: true,
         }),

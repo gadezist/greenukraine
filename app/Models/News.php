@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Events\PostRetrived;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,4 +30,17 @@ class News extends Model
         'status' => 'boolean',
         'custom_date' => 'datetime',
     ];
+
+    protected $dispatchesEvents = [
+        'retrieved' => PostRetrived::class,
+    ];
+
+//    protected static function booted(): void
+//    {
+//        static::retrieved(function ($post) {
+//            if (!$post->status) {
+//                abort(404);
+//            }
+//        });
+//    }
 }

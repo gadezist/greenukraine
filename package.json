@@ -16,6 +16,12 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
+        "@maptiler/geocoding-control": "^1.2.2",
+        "@maptiler/leaflet-maptilersdk": "^2.0.0",
+        "@maptiler/sdk": "^1.2.1",
+        "leaflet": "^1.9.4",
+        "leaflet-draw": "^1.0.4",
+        "localstorage-slim": "^2.7.0",
         "swiper": "^11.0.7"
     }
 }

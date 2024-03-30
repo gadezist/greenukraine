@@ -50,6 +50,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::post('/get/geo-json', [FileController::class, 'getGeoJson'])->name('get-geo-json');
+Route::post('/get/topo-json', [FileController::class, 'getTopoJson'])->name('get-topo-json');
 Route::post('/markers/all', [MarkerController::class, 'all'])->name('markers-all');
 Route::get('/marker/get/{marker}', [MarkerController::class, 'info'])->name('marker-info');
 

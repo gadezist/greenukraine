@@ -17,7 +17,7 @@ class Point implements CastsAttributes
     {
         $result = DB::selectOne("SELECT ST_AsText('$value') as wkt");
 
-        return $result->wkt;
+        return substr($result->wkt, strlen('POINT('), -1);
     }
 
     /**

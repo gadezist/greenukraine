@@ -1,3 +1,10 @@
+import * as L from "leaflet";
+import 'leaflet-draw';
+
+// Import the Leaflet MapTiler Plugin
+import { GeocodingControl } from "@maptiler/geocoding-control/leaflet";
+import { MaptilerLayer } from "@maptiler/leaflet-maptilersdk";
+
 import {drawBoundary, drawMarkers} from "./draw-geo-json.js";
 import {createMarkerEvent} from "./create-marker-event.js";
 import {deleteMarkerEvent} from "./delete-marker.js";
@@ -6,9 +13,8 @@ import {closeContainerEvent} from "./close-container-event.js";
 import {coordinatesMap} from "./coordinates-map.js";
 
 
-
 export function initMap() {
-    let apiMaptilerKey = 'qfW9nHbFDLbnBIr5Grxr';
+    const apiKeyMaptiler = 'Ljk7TdTuwpSyvu1yqZm8';
 
     const osm = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -43,20 +49,25 @@ export function initMap() {
         accessToken: 'pk.eyJ1IjoiZ2FkZXppc3QiLCJhIjoiY2x0aWdsMTYwMGZ4NjJpcXFkNjl6Yzd4ayJ9.Qh_8DXg9LY2U7L_SJsu7oQ'
     })
 
-    const mapTiler = L.tileLayer(`https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=${apiMaptilerKey}`,{ //style URL
-        tileSize: 512,
-        zoomOffset: -1,
-        minZoom: 1,
-        attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
-        crossOrigin: true
-    })
+    // const mapTiler = L.tileLayer(`https://api.maptiler.com/maps/83b92b59-0575-4988-822d-fc554a37838f/style.json?key=${apiKeyMaptiler}`,{ //style URL
+    //     tileSize: 512,
+    //     zoomOffset: -1,
+    //     minZoom: 1,
+    //     attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+    //     crossOrigin: true
+    // })
+
+    // const mtLayer = new MaptilerLayer({
+    //     apiKey: apiKeyMaptiler,
+    //     style: '83b92b59-0575-4988-822d-fc554a37838f',
+    // });
 
     const baseMap = {
         'Google': google,
         'Google hybrid': googleHybrid,
-        'Map Tiler': mapTiler,
+        // 'Map Tiler': mapTiler,
         'Mapbox': mapbox,
-        'Osm': osm
+        'Osm': osm,
     }
 
     let map = L.map('map', {
@@ -65,11 +76,11 @@ export function initMap() {
         layers: [osm],
     });
 
-    L.control.maptilerGeocoding({ apiKey: apiMaptilerKey }).addTo(map);
+    L.control.maptilerGeocoding({ apiKey: apiKeyMaptiler }).addTo(map);
 
     let layerControl = L.control.layers(baseMap).addTo(map);
 
-    drawBoundary('/get/geo-json', map, layerControl)
+    drawBoundary(map, layerControl)
 
     let drawnItems = new L.FeatureGroup();
     map.addLayer(drawnItems);

@@ -4,7 +4,14 @@
         @vite([
             'resources/css/swiper/swiper-marker-info.css',
             'resources/css/map.css',
+            'node_modules/leaflet/dist/leaflet.css',
+            'node_modules/leaflet-draw/dist/leaflet.draw.css',
+            "node_modules/@maptiler/sdk/dist/maptiler-sdk.css",
+            "node_modules/@maptiler/geocoding-control/style.css",
             ])
+    @endsection
+    @section('header_scripts')
+            <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
     @endsection
 
     <div id="map" class="map"></div>
@@ -24,8 +31,10 @@
 
 
     @section('footer_scripts')
-        @vite(['resources/js/swiper/swiper-marker-info.js'])
-        @vite(['resources/js/map/map.js'])
+        @vite([
+            'resources/js/swiper/swiper-marker-info.js',
+            'resources/js/map/map.js'
+            ])
     @endsection
 </x-app-layout>
 

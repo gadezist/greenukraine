@@ -370,7 +370,7 @@ ul.email li i {
 /** banner_main **/
 
 #top_section {
-     background-image: url('/public/images/banner.jpg');
+     background-image: url('/public/images/banner.webp');
      background-size: cover;
      background-repeat: no-repeat;
      padding-top: 120px;

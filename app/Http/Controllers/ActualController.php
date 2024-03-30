@@ -11,7 +11,9 @@ class ActualController
 {
     public function index(): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        $posts = News::orderBy('created_at', 'desc')->get();
+        $posts = News::where('status', true)
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         return view('actual.actual', [
             'posts' => $posts,

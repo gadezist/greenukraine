@@ -25,11 +25,16 @@
 
 #fullscreen-swiper .swiper-slide {
     background: none;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Відцентровує по горизонталі */
+    align-items: center; /* Відцентровує по вертикалі */
 }
 
 #fullscreen-swiper .swiper-slide img {
-    height: 100%;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     cursor: default;
 }

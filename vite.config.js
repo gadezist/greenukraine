@@ -61,7 +61,6 @@ export default defineConfig({
                 'node_modules/leaflet-draw/dist/leaflet.draw.css',
                 "node_modules/@maptiler/sdk/dist/maptiler-sdk.css",
                 "node_modules/@maptiler/geocoding-control/style.css",
-                "node_modules/@maptiler/geocoding-control",
             ],
             refresh: true,
         }),

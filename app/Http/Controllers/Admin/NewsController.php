@@ -33,7 +33,7 @@ class NewsController
 
         $image = $newsRequest->file('image');
 
-        $filePath = $image->store('public');
+        $filePath = $image->store('public/news');
 
         $validatedData = $newsRequest->validated();
 

@@ -1,12 +1,12 @@
 // import axios from "axios";
 
 $(function () {
-    $("#example1").DataTable({
+    $("#user-table").DataTable({
         "responsive": true, "lengthChange": false, "autoWidth": false
     });
 
 
-    $(".custom-control-input, .role-select").change(function(){
+    $(document).on('change', ".custom-control-input, .role-select", function(){
         let trElement = $(this).closest('tr');
         let isActive = $(trElement).find('.custom-control-input').prop('checked');
         let role = $(trElement).find('.role-select').find("option:selected").val();

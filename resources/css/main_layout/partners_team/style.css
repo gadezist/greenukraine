@@ -547,7 +547,7 @@ a:focus {
 
 .why_section .box .img-box {
   margin-bottom: 20px;
-  width: 220px;
+  width: 260px;
   height: 220px;
   min-width: 120px;
   min-height: 120px;
@@ -669,12 +669,12 @@ a:focus {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: center;
+          justify-content: space-around;
 }
 
 .team_section .team_container .box .social_box a {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 35px;
 }
 
 .team_section .team_container .box .social_box a:hover {

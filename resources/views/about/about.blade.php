@@ -64,44 +64,71 @@
                 </h2>
             </div>
             <div class="row justify-content-between">
-                    <div class="col-md-4">
-                        <div class="why_container">
-                            <div class="box">
-                                <div class="img-box">
-                                    <a href="https://ethz.ch/en.html" target="_blank">
-                                        <img style="width: 220px" class="" src={{ asset("images/partners_team/ETH_Zurich_Logo.png") }} alt="ETH Zürich" />
-                                    </a>
-                                </div>
-                                <div class="detail-box">
-{{--                                    <h5>--}}
-{{--                                        ETH Zürich--}}
-{{--                                    </h5>--}}
-{{--                                    <p>--}}
-{{--                                        Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.--}}
-{{--                                    </p>--}}
-                                </div>
+                <div class="col-md-2">
+                    <div class="why_container">
+                        <div class="box">
+                            <div class="img-box">
+                                <a href="https://snau.edu.ua/" target="_blank">
+                                    <img style="width: 260px" class="" src={{ asset("images/partners_team/SNAU_logo.png") }} alt="Sumy National Agrarian University" />
+                                </a>
+                            </div>
+                            <div class="detail-box">
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="why_container">
-                            <div class="box">
-                                <div class="img-box">
-                                    <a href="https://www.bfh.ch/en/" target="_blank">
-                                        <img style="width: 220px" src={{ asset("images/partners_team/BFH_Logo.png") }} alt="BFH" />
-                                    </a>
-                                </div>
-                                <div class="detail-box">
-{{--                                    <h5>--}}
-{{--                                        Bern University of Applied Sciences--}}
-{{--                                    </h5>--}}
-{{--                                    <p>--}}
-{{--                                        Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.--}}
-{{--                                    </p>--}}
-                                </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="why_container">
+                        <div class="box">
+                            <div class="img-box">
+                                <a href="https://www.rau.ac.uk/" target="_blank">
+                                    <img style="width: 260px" class="" src={{ asset("images/partners_team/RAU_logo.png") }} alt="Royal Agricultural University" />
+                                </a>
+                            </div>
+                            <div class="detail-box">
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="why_container">
+                        <div class="box">
+                            <div class="img-box">
+                                <a href="https://ethz.ch/en.html" target="_blank">
+                                    <img style="width: 260px" class="" src={{ asset("images/partners_team/ETH_Zurich_Logo.png") }} alt="ETH Zürich" />
+                                </a>
+                            </div>
+                            <div class="detail-box">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="why_container">
+                        <div class="box">
+                            <div class="img-box">
+                                <a href="https://www.bfh.ch/en/" target="_blank">
+                                    <img style="width: 260px" src={{ asset("images/partners_team/BFH_Logo.png") }} alt="BFH" />
+                                </a>
+                            </div>
+                            <div class="detail-box">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="why_container">
+                        <div class="box">
+                            <div class="img-box">
+                                <a href="https://www.returnassociation.org/" target="_blank">
+                                    <img style="width: 200px" src={{ asset("images/partners_team/Logo_Return.png") }} alt="BFH" />
+                                </a>
+                            </div>
+                            <div class="detail-box">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
         </div>
     </section>

@@ -69,6 +69,11 @@ html {
     height: 80vh !important;
 }
 
+.box-partners {
+    flex: 0 0 20%;
+    padding: 0 10px;
+}
+
 @font-face {
     font-family: 'Helvetica Light';
     src: url('/public/gu_fonts/HelveticaNowDisplay-Light.otf') format('truetype');

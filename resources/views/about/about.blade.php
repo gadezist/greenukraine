@@ -64,7 +64,7 @@
                 </h2>
             </div>
             <div class="row justify-content-between">
-                <div class="col-md-2">
+                <div class="box-partners">
                     <div class="why_container">
                         <div class="box">
                             <div class="img-box">
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="box-partners">
                     <div class="why_container">
                         <div class="box">
                             <div class="img-box">
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="box-partners">
                     <div class="why_container">
                         <div class="box">
                             <div class="img-box">
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="box-partners">
                     <div class="why_container">
                         <div class="box">
                             <div class="img-box">
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="box-partners">
                     <div class="why_container">
                         <div class="box">
                             <div class="img-box">

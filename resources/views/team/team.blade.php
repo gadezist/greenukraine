@@ -122,7 +122,7 @@
                             </div>
                             <div class="detail-box" style="margin-bottom: 0">
                                 <h5>
-                                    Dr. Olena Melnyk
+                                    Assoc.Prof. Olena Melnyk
                                 </h5>
                                 <p>ETH Zürich</p>
                             </div>
@@ -185,7 +185,7 @@
                             </div>
                             <div class="detail-box" style="margin-bottom: 0">
                                 <h5>
-                                    Prof. Elina Zakharchenko
+                                    Assoc.Prof. Elina Zakharchenko
                                 </h5>
                                 <p>Sumy National Agrarian University</p>
                             </div>
